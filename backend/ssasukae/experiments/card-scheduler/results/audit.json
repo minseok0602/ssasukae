@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "matrixRowsCrossChecked": 187,
+  "productionSourcesHashMatched": 234,
+  "coreBaseline": "60/60 stuck",
+  "coreCandidate": "60/60 converged",
+  "extensionCases": "6 cases x5 valid converged",
+  "policy": "user-selected cancellation",
+  "rawStateEventAgreement": true,
+  "jwtArtifacts": []
+}

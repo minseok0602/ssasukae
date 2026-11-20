@@ -1,0 +1,54 @@
+name: ssasukae-card-scheduler-experiment
+services:
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: card_experiment
+      MYSQL_USER: experiment
+      MYSQL_PASSWORD: experiment-local-only
+      MYSQL_ROOT_PASSWORD: experiment-root-local-only
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: [CMD, mysqladmin, ping, -h, localhost, -uroot, -pexperiment-root-local-only]
+      interval: 1s
+      timeout: 3s
+      retries: 90
+  redis:
+    image: redis:7-alpine
+    command: [redis-server, --appendonly, 'yes']
+    ports: ['127.0.0.1:16384:6379']
+    volumes:
+      - redis-data:/data
+  app:
+    image: ${CARD_EXPERIMENT_IMAGE:-ssasukae-card-experiment:local}
+    build: .
+    working_dir: /experiment
+    command: [java, '-XX:TieredStopAtLevel=1', '-Xms128m', '-Xmx512m', '-cp', '/runtime/classes:/runtime/lib/*', experiment.CardExperimentApplication]
+    volumes: ['.:/experiment']
+    ports: ['127.0.0.1:18084:8080']
+    depends_on:
+      mysql: {condition: service_healthy}
+      redis: {condition: service_started}
+    environment:
+      INSTANCE: app
+      EXPERIMENT_RECOVERY_ENABLED: ${EXPERIMENT_RECOVERY_ENABLED:-false}
+      EXPERIMENT_RECOVERY_POLICY: ${EXPERIMENT_RECOVERY_POLICY:-}
+      EXPERIMENT_RECOVERY_SCAN_DELAY_MS: ${EXPERIMENT_RECOVERY_SCAN_DELAY_MS:-100}
+      SPRING_DATA_REDIS_TIMEOUT: 1s
+  app2:
+    profiles: [race]
+    image: ${CARD_EXPERIMENT_IMAGE:-ssasukae-card-experiment:local}
+    working_dir: /experiment
+    command: [java, '-XX:TieredStopAtLevel=1', '-Xms128m', '-Xmx512m', '-cp', '/runtime/classes:/runtime/lib/*', experiment.CardExperimentApplication]
+    volumes: ['.:/experiment']
+    ports: ['127.0.0.1:18085:8080']
+    environment:
+      INSTANCE: app2
+      EXPERIMENT_RECOVERY_ENABLED: ${EXPERIMENT_RECOVERY_ENABLED:-false}
+      EXPERIMENT_RECOVERY_POLICY: ${EXPERIMENT_RECOVERY_POLICY:-}
+      EXPERIMENT_RECOVERY_SCAN_DELAY_MS: ${EXPERIMENT_RECOVERY_SCAN_DELAY_MS:-100}
+      SPRING_DATA_REDIS_TIMEOUT: 1s
+volumes:
+  mysql-data:
+  redis-data:

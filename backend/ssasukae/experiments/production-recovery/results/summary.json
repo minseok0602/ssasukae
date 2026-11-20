@@ -1,0 +1,18 @@
+{
+  "cases": {
+    "ACTIVE": 10,
+    "PENDING": 10,
+    "LATE_RECONNECT": 10
+  },
+  "duplicates": 0,
+  "ordinaryReconnectMs": {
+    "median": 3429.5,
+    "p95": 3629,
+    "max": 3855
+  },
+  "endDelayMs": {
+    "median": 6.5,
+    "p95": 10,
+    "max": 62
+  }
+}

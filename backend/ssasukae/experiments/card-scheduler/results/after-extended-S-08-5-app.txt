@@ -1,0 +1,111 @@
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=98 at=2026-11-20T02:28:42.889568764Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=99 at=2026-11-20T02:28:49.492222946Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=99 at=2026-11-20T02:28:59.509479094Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=100 at=2026-11-20T02:29:21.440642803Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=102 at=2026-11-20T02:29:56.718031337Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=103 at=2026-11-20T02:30:11.190507526Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=104 at=2026-11-20T02:30:25.508572258Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=105 at=2026-11-20T02:30:40.231121787Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=106 at=2026-11-20T02:30:54.470393957Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=107 at=2026-11-20T02:31:08.921576315Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=108 at=2026-11-20T02:31:22.935100669Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=109 at=2026-11-20T02:31:37.498064244Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=110 at=2026-11-20T02:31:51.975549653Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=111 at=2026-11-20T02:32:06.247794091Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=112 at=2026-11-20T02:32:20.946827315Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=113 at=2026-11-20T02:32:34.954538530Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=114 at=2026-11-20T02:32:49.443953809Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=115 at=2026-11-20T02:33:03.545301178Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=116 at=2026-11-20T02:33:18.050092344Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=117 at=2026-11-20T02:33:32.435069002Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=118 at=2026-11-20T02:33:46.714015488Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=119 at=2026-11-20T02:34:01.364657862Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=120 at=2026-11-20T02:34:15.655020272Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=121 at=2026-11-20T02:34:29.932709263Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=122 at=2026-11-20T02:34:47.065910573Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=123 at=2026-11-20T02:35:01.510860543Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=124 at=2026-11-20T02:35:15.786845140Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=125 at=2026-11-20T02:35:30.237634515Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=126 at=2026-11-20T02:35:44.664668652Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=127 at=2026-11-20T02:35:49.053389684Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=127 at=2026-11-20T02:35:59.113147859Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=129 at=2026-11-20T02:36:27.936150394Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=130 at=2026-11-20T02:36:42.335219229Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=131 at=2026-11-20T02:36:56.741745169Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=132 at=2026-11-20T02:37:11.078952962Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=133 at=2026-11-20T02:37:25.573289033Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=134 at=2026-11-20T02:37:39.921539261Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=135 at=2026-11-20T02:37:54.315235049Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=136 at=2026-11-20T02:38:08.737804130Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=137 at=2026-11-20T02:38:23.169958875Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=138 at=2026-11-20T02:38:37.578652061Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=139 at=2026-11-20T02:38:41.883868645Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=139 at=2026-11-20T02:38:51.935415933Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=141 at=2026-11-20T02:39:20.676282963Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=142 at=2026-11-20T02:39:42.786125961Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=143 at=2026-11-20T02:40:05.201957842Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=144 at=2026-11-20T02:40:27.794865587Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=145 at=2026-11-20T02:40:50.226276780Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=146 at=2026-11-20T02:41:12.643061359Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=147 at=2026-11-20T02:41:35.103770154Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=148 at=2026-11-20T02:41:40.225821840Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=148 at=2026-11-20T02:41:57.677483728Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=149 at=2026-11-20T02:42:20.283964506Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=150 at=2026-11-20T02:42:42.693578184Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=151 at=2026-11-20T02:43:05.243338871Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=152 at=2026-11-20T02:43:10.377155456Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=152 at=2026-11-20T02:43:27.801946874Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=153 at=2026-11-20T02:43:50.541978859Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=154 at=2026-11-20T02:44:13.006188339Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=155 at=2026-11-20T02:44:35.387013583Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=156 at=2026-11-20T02:44:57.962516935Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=157 at=2026-11-20T02:45:20.700207239Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=158 at=2026-11-20T02:45:44.673692665Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=159 at=2026-11-20T02:46:08.314651565Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=160 at=2026-11-20T02:46:31.997492705Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=161 at=2026-11-20T02:46:55.422143055Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=163 at=2026-11-20T02:48:43.338918631Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=164 at=2026-11-20T02:49:01.477178349Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=164 at=2026-11-20T02:49:11.589300786Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=165 at=2026-11-20T02:49:45.269305286Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=166 at=2026-11-20T02:49:56.893131589Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=167 at=2026-11-20T02:50:08.748021828Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=168 at=2026-11-20T02:50:20.776157174Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=169 at=2026-11-20T02:50:32.443300980Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=171 at=2026-11-20T02:50:52.402476650Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=172 at=2026-11-20T02:51:07.636804453Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=174 at=2026-11-20T02:51:37.265069376Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=175 at=2026-11-20T02:52:09.780268325Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=176 at=2026-11-20T02:52:32.585451787Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=177 at=2026-11-20T02:52:55.048753448Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=178 at=2026-11-20T02:53:17.748236964Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=179 at=2026-11-20T02:53:40.636337738Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=182 at=2026-11-20T02:54:33.975018111Z
+app-1  | 2026-11-20T02:55:46.007Z  WARN 1 --- [ioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [redis/<unresolved>:6379]: Connection refused: redis/172.22.0.3:6379
+app-1  | RECOVERY_SCAN_RETRY type=QueryTimeoutException
+app-1  | RECOVERY_SCAN_RETRY type=QueryTimeoutException
+app-1  | RECOVERY_SCAN_RETRY type=QueryTimeoutException
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=185 at=2026-11-20T02:55:58.461742744Z
+app-1  | 2026-11-20T02:56:04.708Z  WARN 1 --- [ioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [redis/<unresolved>:6379]: Connection refused: redis/172.22.0.3:6379
+app-1  | RECOVERY_SCAN_RETRY type=QueryTimeoutException
+app-1  | RECOVERY_SCAN_RETRY type=QueryTimeoutException
+app-1  | RECOVERY_SCAN_RETRY type=QueryTimeoutException
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=186 at=2026-11-20T02:56:17.538626891Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=187 at=2026-11-20T02:56:23.528244270Z
+app-1  | 2026-11-20T02:56:23.900Z  WARN 1 --- [ioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [redis/<unresolved>:6379]: Connection refused: redis/172.22.0.3:6379
+app-1  | RECOVERY_SCAN_RETRY type=QueryTimeoutException
+app-1  | RECOVERY_SCAN_RETRY type=QueryTimeoutException
+app-1  | RECOVERY_SCAN_RETRY type=QueryTimeoutException
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=187 at=2026-11-20T02:56:35.522051779Z
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=188 at=2026-11-20T02:56:41.104519897Z
+app-1  | RECOVERY_SCAN_RETRY type=RedisSystemException
+app-1  | 2026-11-20T02:56:41.518Z  WARN 1 --- [ioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [redis/<unresolved>:6379]: Connection refused: redis/172.22.0.3:6379
+app-1  | RECOVERY_SCAN_RETRY type=QueryTimeoutException
+app-1  | RECOVERY_SCAN_RETRY type=QueryTimeoutException
+app-1  | RECOVERY_SCAN_RETRY type=QueryTimeoutException
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=188 at=2026-11-20T02:56:53.012525904Z
+app-1  | 2026-11-20T02:56:58.920Z  WARN 1 --- [xecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [redis/<unresolved>:6379]: Connection refused: redis/172.22.0.3:6379
+app-1  | RECOVERY_SCAN_RETRY type=QueryTimeoutException
+app-1  | RECOVERY_SCAN_RETRY type=QueryTimeoutException
+app-1  | RECOVERY_SCAN_RETRY type=QueryTimeoutException
+app-1  | RECOVERY_LOCK_ATTEMPT instance=app room=189 at=2026-11-20T02:57:10.540968790Z

@@ -1,0 +1,11 @@
+{"case": "LIVE_ROOM_AND_PRIVATE", "roomMessages": 100, "privateMessages": 100, "outcome": "PASS"}
+{"case": "LIVE_CARD_FROM_B_TO_A", "iteration": 1, "outcome": "PASS", "finalCard": "NONE"}
+{"case": "LIVE_CARD_FROM_B_TO_A", "iteration": 2, "outcome": "PASS", "finalCard": "NONE"}
+{"case": "LIVE_CARD_FROM_B_TO_A", "iteration": 3, "outcome": "PASS", "finalCard": "NONE"}
+{"case": "LIVE_CARD_FROM_B_TO_A", "iteration": 4, "outcome": "PASS", "finalCard": "NONE"}
+{"case": "LIVE_CARD_FROM_B_TO_A", "iteration": 5, "outcome": "PASS", "finalCard": "NONE"}
+{"case": "LIVE_CARD_FROM_B_TO_A", "iteration": 6, "outcome": "PASS", "finalCard": "NONE"}
+{"case": "LIVE_CARD_FROM_B_TO_A", "iteration": 7, "outcome": "PASS", "finalCard": "NONE"}
+{"case": "LIVE_CARD_FROM_B_TO_A", "iteration": 8, "outcome": "PASS", "finalCard": "NONE"}
+{"case": "LIVE_CARD_FROM_B_TO_A", "iteration": 9, "outcome": "PASS", "finalCard": "NONE"}
+{"case": "LIVE_CARD_FROM_B_TO_A", "iteration": 10, "outcome": "PASS", "finalCard": "NONE"}

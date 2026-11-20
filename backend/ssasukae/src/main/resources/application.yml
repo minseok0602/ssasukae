@@ -91,3 +91,20 @@ jwt:
   secret: ${JWT_SECRET}
   access-token-expiration: 86400000      # 하루
   refresh-token-expiration: 604800000  # 7일
+
+# Card deadlines survive JVM loss in Redis snapshots. A live timer has a small jitter window;
+# overdue PENDING snapshots discovered after a restart are cancelled, never started late.
+card:
+  recovery:
+    enabled: ${CARD_RECOVERY_ENABLED:true}
+    scan-delay: 250ms
+    start-execution-grace: 500ms
+
+# Every node independently tails this stream and forwards to its own STOMP sessions.
+websocket:
+  relay:
+    enabled: ${WEBSOCKET_RELAY_ENABLED:true}
+    stream-key: ${WEBSOCKET_EVENT_STREAM:ssasukae:websocket:events}
+    poll-delay: 50ms
+    batch-size: 100
+    max-length: 100000

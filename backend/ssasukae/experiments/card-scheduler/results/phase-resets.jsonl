@@ -1,0 +1,2 @@
+{"at": "2026-11-20T02:25:11.843386+00:00", "beforePhase": "after-smoke", "isolatedRedisKeysCleared": 402, "reason": "Remove completed baseline fixtures after saving evidence"}
+{"at": "2026-11-20T02:28:02.856492+00:00", "beforePhase": "after-smoke", "isolatedRedisKeysCleared": 15, "reason": "Remove completed baseline fixtures after saving evidence"}

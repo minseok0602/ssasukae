@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "matrixRowsChecked": 38,
+  "baselineExpectedStuck": 5,
+  "recoveryPasses": 30,
+  "actualAuthenticatedSessionsVerified": true,
+  "actualUserAndRoomSubscriptionsVerified": true,
+  "onlyBPublishedRecoveredEnds": true,
+  "jwtArtifactMatches": [],
+  "productionSourcesUnchanged": 234
+}
