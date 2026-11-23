@@ -148,11 +148,24 @@ public class PerformanceRecoveryService {
     }
     // 현재 분석중이라면 복구 정보 저장
     if (current.status() == PerformanceStatus.ANALYZING) {
+      var deadline = current.playbackFinishedAt().toInstant().plus(properties.getAnalysisTimeout());
+      if (now.isBefore(deadline)) {
+        deadlineStore.save(performanceId, deadline);
+        return;
+      }
       failAnalysis(room, current);
       return;
     }
 
-    // 기존 버전에서 저장한 SUSPENDED deadline을 포함해 ANALYZING이 아닌 항목은 정리만 한다.
+    if (current.status() == PerformanceStatus.SUSPENDED && current.lastInterruptionId() != null) {
+      // The due batch may have been read before the performer reconnected or a newer disconnect.
+      var deadline = deadlineStore.findDeadline(performanceId);
+      if (deadline.isEmpty() || now.isBefore(deadline.get())) return;
+      cancellationProcessor.cancel(room, current, PerformanceCancelReason.PERFORMER_DISCONNECTED);
+      transactionSupport.deleteRecoveryDeadline(performanceId);
+      return;
+    }
+    // Legacy media-only suspension is expired by the participant reconnect worker.
     deadlineStore.delete(performanceId);
   }
 

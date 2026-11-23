@@ -33,6 +33,14 @@ public class RedisPerformanceRecoveryDeadlineStore implements PerformanceRecover
     redisTemplate.opsForZSet().remove(DEADLINE_KEY, performanceId.toString());
   }
 
+  @Override
+  public java.util.Optional<Instant> findDeadline(Long performanceId) {
+    Double score = redisTemplate.opsForZSet().score(DEADLINE_KEY, performanceId.toString());
+    return score == null
+        ? java.util.Optional.empty()
+        : java.util.Optional.of(Instant.ofEpochMilli(score.longValue()));
+  }
+
   // 만료가된 공연 정보의 ID만 가져옴
   @Override
   public List<Long> findDuePerformanceIds(Instant now, int limit) {
