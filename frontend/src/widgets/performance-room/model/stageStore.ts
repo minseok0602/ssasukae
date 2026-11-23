@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { readInterruption, type ConnectionInterruption } from './connectionInterruption';
 
 import {
   DEFAULT_PERFORMANCE_SETTINGS,
@@ -8,7 +9,7 @@ import {
   type PerformanceStartedPayload,
   type PerformanceSuspendedPayload,
 } from '@/entities/performance';
-import type { RoomSnapshotResponse } from '@/entities/room';
+import { useRoomStore, type RoomSnapshotResponse } from '@/entities/room';
 
 export type StagePhase =
   | 'WAITING'
@@ -32,6 +33,9 @@ export interface StageSong {
 }
 
 interface StageStore {
+  localInterruption: ConnectionInterruption | null;
+  serverClockOffsetMs: number;
+  resumeAt: string | null;
   camOn: boolean;
   /** DSP 조절 패널 노출 여부. 제스처와 버튼 양쪽에서 여닫는다 */
   dspPanelOpen: boolean;
@@ -99,6 +103,9 @@ interface StageStore {
 }
 
 const INITIAL_PERFORMANCE_STATE = {
+  localInterruption: null as ConnectionInterruption | null,
+  serverClockOffsetMs: 0,
+  resumeAt: null as string | null,
   performerParticipantId: null,
   phase: 'WAITING' as StagePhase,
   score: null,
@@ -198,6 +205,7 @@ export const useStageStore = create<StageStore>((set) => ({
       isSuspended: false,
       suspendedAt: null,
       resumeOffsetMs: 0,
+      resumeAt: null,
       dspPanelOpen: false,
     }),
 
@@ -219,15 +227,21 @@ export const useStageStore = create<StageStore>((set) => ({
 
   // suspendedAt은 서버가 유예를 재기 시작한 시각이다. 재접속 카운트다운의 기준이라 payload 값을 그대로 쓴다.
   applyPerformanceSuspended: (payload) =>
-    set({ isSuspended: true, suspendedAt: payload.suspendedAt }),
+    set((state) => state.performanceId !== payload.performanceId
+      || (state.resumeAt !== null && Date.parse(payload.suspendedAt) < Date.parse(state.resumeAt) - 500) ? state : ({
+      isSuspended: true, suspendedAt: payload.suspendedAt,
+      resumeOffsetMs: state.localInterruption?.playbackPositionMs ?? payload.playbackPositionMs,
+    })),
 
   applyPerformanceResumed: (payload) =>
-    set((state) => ({
+    set((state) => state.performanceId !== payload.performanceId || state.localInterruption !== null
+      || (state.isSuspended && state.suspendedAt !== null && Date.parse(payload.resumeAt) < Date.parse(state.suspendedAt)) ? state : ({
       isSuspended: false,
       suspendedAt: null,
       performanceId: payload.performanceId,
       performerParticipantId: payload.performerParticipantId,
       resumeOffsetMs: payload.resumePositionMs,
+      resumeAt: payload.resumeAt,
       // 서버 settings는 4개 필드만 관리하므로 로컬 전용 값(마이크 볼륨 등)은 유지한다.
       settings: { ...state.settings, ...payload.settings },
       phase: payload.currentStatus === 'PLAYING' ? 'PERFORMING' : 'READY',
@@ -236,6 +250,11 @@ export const useStageStore = create<StageStore>((set) => ({
   hydrateFromRoomSnapshot: (snapshot) =>
     set((state) => {
       const performance = snapshot.performance;
+      const interruption = state.localInterruption ?? readInterruption();
+      const localInterruption = interruption !== null && interruption.roomId === useRoomStore.getState().session?.roomId
+        && interruption.performanceId === performance?.performanceId
+        && interruption.participantId === performance?.performerParticipantId
+        && interruption.participantId === useRoomStore.getState().session?.myParticipantId ? interruption : null;
 
       // 서버에 공연이 없다. 다만 가창자 지정은 공연 생성 전에도 서버 stageRole에 남는다
       // (역할은 취소·채점 완료 시점에 해제되므로 PERFORMER가 있으면 진행 중인 지정이다).
@@ -290,6 +309,8 @@ export const useStageStore = create<StageStore>((set) => ({
       const phase = localIsAhead ? state.phase : snapshotPhase;
 
       return {
+        localInterruption,
+        serverClockOffsetMs: snapshot.serverNow ? Date.parse(snapshot.serverNow) - Date.now() : state.serverClockOffsetMs,
         performanceId: performance.performanceId,
         performerParticipantId: performance.performerParticipantId,
         selectedSong: {
@@ -318,14 +339,14 @@ export const useStageStore = create<StageStore>((set) => ({
             : null,
         scoringFailed: performance.status === 'ANALYSIS_FAILED',
         // 로컬이 더 진행된 경우 스냅샷의 낡은 정지 상태·재생 위치로 덮어쓰지 않는다.
-        isSuspended: localIsAhead ? state.isSuspended : isSuspended,
+        isSuspended: localInterruption !== null || (localIsAhead ? state.isSuspended : isSuspended),
         // 일시 중지 중 새로고침해도 카운트다운이 처음부터 다시 세지 않도록 서버 시각을 복원한다.
         suspendedAt: localIsAhead
           ? state.suspendedAt
           : isSuspended
             ? performance.suspendedAt
             : null,
-        resumeOffsetMs: localIsAhead
+        resumeOffsetMs: localInterruption ? localInterruption.playbackPositionMs : localIsAhead
           ? state.resumeOffsetMs
           : (snapshot.playback?.playbackPositionMs ?? 0),
       };

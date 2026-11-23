@@ -12,6 +12,7 @@ import { getApiErrorMessage } from '@/shared/api/getApiErrorMessage';
 import { showToast } from '@/shared/model/toastStore';
 
 import { useStageStore } from './stageStore';
+import { useResumeGate } from './useResumeGate';
 
 /**
  * 백엔드가 내려주는 난이도를 AI의 difficultyScore(0~100)로 그대로 보낸다.
@@ -27,6 +28,7 @@ function toDifficultyScore(difficultyLevel: number | null | undefined): number {
 export function useStageScoring(isPerformer: boolean, engine: VocalAudioEngine | null): void {
   const phase = useStageStore((state) => state.phase);
   const isSuspended = useStageStore((state) => state.isSuspended);
+  const resumeReady = useResumeGate();
   const { user } = useAuth();
   const userId = user?.id ?? null;
 
@@ -103,7 +105,9 @@ export function useStageScoring(isPerformer: boolean, engine: VocalAudioEngine |
 
         session.start();
         // 내려받는 사이에 공연이 멈췄을 수 있다. 지금 상태를 다시 보고 맞춘다.
-        if (useStageStore.getState().isSuspended) session.pause();
+        const stage = useStageStore.getState();
+        if (stage.isSuspended || stage.localInterruption !== null || (stage.resumeAt !== null
+            && Date.parse(stage.resumeAt) > Date.now() + stage.serverClockOffsetMs)) session.pause();
 
         created = session;
         sessionRef.current = session;
@@ -126,12 +130,12 @@ export function useStageScoring(isPerformer: boolean, engine: VocalAudioEngine |
     const session = sessionRef.current;
     if (session === null || phase !== 'PERFORMING') return;
 
-    if (isSuspended) {
+    if (isSuspended || !resumeReady) {
       session.pause();
     } else {
       session.resume();
     }
-  }, [phase, isSuspended]);
+  }, [phase, isSuspended, resumeReady]);
 
   // 전송 — 무대가 PERFORMING을 벗어난 순간 한 번.
   useEffect(() => {

@@ -1,4 +1,6 @@
 import { useCallback, useEffect } from 'react';
+import { registerPerformerEngine } from './connectionInterruption';
+import { useResumeGate } from './useResumeGate';
 
 import { useDeviceSettingsStore } from '@/entities/media-device';
 import { useVocalAudioEngine, type VocalAudioEngineState } from '@/features/vocal-audio-engine';
@@ -40,6 +42,7 @@ export function useStageAudioEngine(isPerformer: boolean): VocalAudioEngineState
   }, [isHydrated, hydrate]);
 
   const socket = useRoomSocketContext();
+  const resumeReady = useResumeGate();
 
   // MR이 끝까지 재생되면 가창자가 정상 종료를 알리고 채점 단계로 전이한다.
   // 중도 취소(버튼·제스처)는 cancel을 보내므로 playback/finish는 여기서만 나간다.
@@ -58,7 +61,7 @@ export function useStageAudioEngine(isPerformer: boolean): VocalAudioEngineState
     // 시작 요청 후에 받고, 재접속 복원(PERFORMING 진입)은 재개에 필요하므로 바로 받는다.
     mrUrl: mrLoadRequested || phase === 'PERFORMING' ? mrDownloadUrl : null,
     // 일시 중지 동안 MR을 멈췄다가 재개 이벤트가 오면 서버가 준 위치부터 이어 재생한다.
-    playing: phase === 'PERFORMING' && !isSuspended,
+    playing: socket.isConnected && resumeReady && phase === 'PERFORMING' && !isSuspended,
     startOffsetMs: resumeOffsetMs,
     micOn,
     dsp: {
@@ -74,6 +77,12 @@ export function useStageAudioEngine(isPerformer: boolean): VocalAudioEngineState
     onMrEnded: handleMrEnded,
   });
 
+  useEffect(() => {
+    if (!isPerformer) return;
+    registerPerformerEngine(engine.engine);
+    return () => registerPerformerEngine(null);
+  }, [isPerformer, engine.engine]);
+
   const { replaceAudioTrack, sendStageSignal } = useOpenViduSessionContext();
   const { getBroadcastStream } = engine;
   const isBroadcastingMix = isPerformer && phase === 'PERFORMING';
@@ -81,7 +90,7 @@ export function useStageAudioEngine(isPerformer: boolean): VocalAudioEngineState
   // 청자 가사 시계의 재앵커용으로 실제 MR 재생 위치를 주기적으로 알린다.
   // OpenVidu 시그널이라 백엔드를 거치지 않고, 일시 중지 동안에는 보내지 않는다.
   const vocalEngine = engine.engine;
-  const isBroadcastingPosition = isPerformer && phase === 'PERFORMING' && !isSuspended;
+  const isBroadcastingPosition = isPerformer && resumeReady && phase === 'PERFORMING' && !isSuspended;
 
   useEffect(() => {
     if (!isBroadcastingPosition || vocalEngine === null) return;

@@ -33,6 +33,18 @@ public class PerformanceTransactionSupport {
         });
   }
 
+  public void saveWithRecoveryDeadline(
+      PerformanceSnapShot previous, PerformanceSnapShot changed, java.time.Instant deadline) {
+    var oldDeadline = recoveryDeadlineStore.findDeadline(previous.performanceId()).orElse(null);
+    if (!performanceStore.replaceWithRecoveryDeadline(previous, changed, deadline))
+      throw new IllegalStateException("공연 상태가 다른 요청에 의해 먼저 변경되었습니다.");
+    restoreOnRollback(
+        () -> {
+          if (!performanceStore.replaceWithRecoveryDeadline(changed, previous, oldDeadline))
+            throw new IllegalStateException("롤백 중 공연 스냅샷이 이미 변경되었습니다.");
+        });
+  }
+
   public void deletePerformance(PerformanceSnapShot snapShot) {
     try {
       performanceStore.delete(snapShot);

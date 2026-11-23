@@ -43,6 +43,8 @@ import { hydrateCardsFromRoomSnapshot, useCardStore } from './cardStore';
 import { useChatStore } from './chatStore';
 import { useLatencyStore } from './latencyStore';
 import { useStageStore } from './stageStore';
+import { captureInterruption, clearInterruption, readInterruption } from './connectionInterruption';
+import { apiClient, ApiError } from '@/shared/api/client';
 
 /** 연결 상태 확인 PING 전송 주기 (백엔드 하트비트 10초와 동일) */
 const PING_INTERVAL_MS = 10_000;
@@ -89,6 +91,10 @@ export function useRoomSocket(roomId: number | null): RoomSocketApi {
     if (roomId === null) {
       return;
     }
+
+    let generation = 0;
+    let disposed = false;
+    let recoveryTimer: ReturnType<typeof setTimeout> | null = null;
 
     let pingInterval: ReturnType<typeof setInterval> | null = null;
 
@@ -300,6 +306,21 @@ export function useRoomSocket(roomId: number | null): RoomSocketApi {
       });
     };
 
+    const freezeOnConnectionLoss = () => {
+        ++generation;
+        if (recoveryTimer) clearTimeout(recoveryTimer);
+        const stage = useStageStore.getState();
+        const me = useRoomStore.getState().session;
+        if (me?.myParticipantId === stage.performerParticipantId && stage.performanceId !== null
+            && (stage.phase === 'PERFORMING' || stage.phase === 'READY')) {
+          const interruption = captureInterruption({ roomId, performanceId: stage.performanceId,
+            participantId: me.myParticipantId,
+            interruptedAt: new Date(Date.now() + stage.serverClockOffsetMs).toISOString() }, stage.resumeOffsetMs);
+          useStageStore.setState({ localInterruption: interruption, isSuspended: true,
+            suspendedAt: interruption.interruptedAt, resumeOffsetMs: interruption.playbackPositionMs });
+        }
+    };
+
     const client = createStompClient({
       onConnect: () => {
         setIsConnected(true);
@@ -324,16 +345,40 @@ export function useRoomSocket(roomId: number | null): RoomSocketApi {
             .setLatencyMs(Number.isFinite(roundTrip) && roundTrip >= 0 ? roundTrip : null);
         });
 
-        // 구독을 먼저 연 뒤 현재 상태를 조회해 초기 연결·재연결 사이에 놓친 공연 이벤트를 복구한다.
-        getRoomSnapshot(roomId)
-          .then((snapshot) => {
+        // Subscribe first, then acknowledge the performer's freeze before hydrating PLAYING.
+        const epoch = ++generation;
+        const restore = async () => {
+          const alive = () => !disposed && client.connected && generation === epoch;
+          try {
+            const pending = readInterruption();
+            const me = useRoomStore.getState().session;
+            if (pending && pending.roomId === roomId && pending.participantId === me?.myParticipantId) {
+              await apiClient(`/api/rooms/${roomId}/performances/${pending.performanceId}/connection-recovery`, {
+                method: 'POST', auth: true,
+                body: { interruptionId: pending.interruptionId, interruptedAt: pending.interruptedAt,
+                  playbackPositionMs: pending.playbackPositionMs },
+              });
+            }
+            if (!alive()) return;
+            const snapshot = await getRoomSnapshot(roomId);
+            if (!alive()) return;
+            if (pending && pending.participantId === me?.myParticipantId) {
+              clearInterruption(pending.interruptionId);
+              useStageStore.setState({ localInterruption: null });
+            }
             useRoomStore.getState().hydrateFromSnapshot(snapshot);
             useStageStore.getState().hydrateFromRoomSnapshot(snapshot);
             hydrateCardsFromRoomSnapshot(snapshot);
-          })
-          .catch(() => {
-            // 주 화면의 오류 처리와 다음 재연결에 맡긴다.
-          });
+          } catch (error) {
+            if (!alive()) return;
+            if (error instanceof ApiError && error.status >= 400 && error.status < 500) {
+              showToast('공연 상태를 확인하지 못했어요. 다시 연결하거나 방에 재입장해 주세요.', 'error');
+              return;
+            }
+            recoveryTimer = setTimeout(() => { void restore(); }, 2000);
+          }
+        };
+        void restore();
 
         // 연결 직후 1회 전송 후 주기적으로 연결 상태를 확인한다.
         stopPing();
@@ -341,11 +386,13 @@ export function useRoomSocket(roomId: number | null): RoomSocketApi {
         pingInterval = setInterval(sendPing, PING_INTERVAL_MS);
       },
       onDisconnect: () => {
+        freezeOnConnectionLoss();
         stopPing();
         setIsConnected(false);
         useLatencyStore.getState().setLatencyMs(null);
       },
       onStompError: (brokerMessage) => {
+        freezeOnConnectionLoss();
         stopPing();
         setIsConnected(false);
         useLatencyStore.getState().setLatencyMs(null);
@@ -360,6 +407,9 @@ export function useRoomSocket(roomId: number | null): RoomSocketApi {
     client.activate();
 
     return () => {
+      disposed = true;
+      ++generation;
+      if (recoveryTimer) clearTimeout(recoveryTimer);
       stopPing();
       clientRef.current = null;
       setIsConnected(false);
@@ -429,6 +479,7 @@ export function useRoomSocket(roomId: number | null): RoomSocketApi {
         publish(`/app/rooms/${roomId}/performances/${performanceId}/cards/activate`);
       },
       sendResumeReady: () => {
+        if (useStageStore.getState().localInterruption) return;
         const performanceId = currentPerformanceId();
         if (roomId === null || performanceId === null) return;
         publish(`/app/rooms/${roomId}/performances/${performanceId}/resume-ready`);
