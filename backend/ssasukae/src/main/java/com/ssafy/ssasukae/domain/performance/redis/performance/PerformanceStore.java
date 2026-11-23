@@ -4,17 +4,20 @@ import java.util.Optional;
 
 public interface PerformanceStore {
 
-    long nextPerformanceId();
+  long nextPerformanceId();
 
-    boolean create(PerformanceSnapShot session);
+  boolean create(PerformanceSnapShot session);
 
-    void save(PerformanceSnapShot session);
+  void save(PerformanceSnapShot session);
 
-    boolean replace(PerformanceSnapShot expected, PerformanceSnapShot changed);
+  boolean replace(PerformanceSnapShot expected, PerformanceSnapShot changed);
 
-    Optional<PerformanceSnapShot> findByPerformanceId(Long performanceId);
+  boolean replaceWithRecoveryDeadline(
+      PerformanceSnapShot expected, PerformanceSnapShot changed, java.time.Instant deadline);
 
-    Optional<PerformanceSnapShot> findActiveByRoomId(Long roomId);
+  Optional<PerformanceSnapShot> findByPerformanceId(Long performanceId);
 
-    void delete(PerformanceSnapShot session);
+  Optional<PerformanceSnapShot> findActiveByRoomId(Long roomId);
+
+  void delete(PerformanceSnapShot session);
 }

@@ -117,7 +117,7 @@ public class PerformanceConnectionRecoveryService {
       throw business(WebSocketErrorCode.INVALID_PERFORMANCE_STATE);
     }
 
-    OffsetDateTime resumeAt = now();
+    OffsetDateTime resumeAt = now().plusNanos(500_000_000);
     PerformanceSnapShot resumed = suspended.resumeAfterPerformerReconnect(resumeAt);
     transactionSupport.saveWithRollback(suspended, resumed);
     transactionSupport.afterCommit(

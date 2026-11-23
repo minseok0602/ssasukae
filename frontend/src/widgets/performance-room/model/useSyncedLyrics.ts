@@ -26,6 +26,7 @@ import { resolveEffectiveSettings } from './effectiveSettings';
 import { useOpenViduSessionContext } from './OpenViduSessionContext';
 import { useStageAudioContext } from './StageAudioContext';
 import { useStageStore } from './stageStore';
+import { useResumeGate } from './useResumeGate';
 import { useListenerAudioDelay } from './useListenerAudioDelay';
 
 /** 조회 실패 사유. 서버가 준 사유에 클라이언트 쪽 사유를 더한다 */
@@ -136,7 +137,8 @@ function useLyricsClock(isPerformer: boolean, engine: VocalAudioEngine | null): 
   const { subscribeStageSignal } = useOpenViduSessionContext();
   const rate = usePlaybackRate();
 
-  const isRunning = phase === 'PERFORMING' && !isSuspended;
+  const resumeReady = useResumeGate();
+  const isRunning = resumeReady && phase === 'PERFORMING' && !isSuspended;
   const clockRef = useRef<{ positionMs: number; readAt: number } | null>(null);
   const rateRef = useRef(rate);
 

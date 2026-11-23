@@ -9,6 +9,8 @@ import { useRoomSocketContext } from '../../model/RoomSocketContext';
 import { useRemainingSeconds } from '../../model/useRemainingSeconds';
 import { useStageStore } from '../../model/stageStore';
 import { StageButton } from './StageButton';
+import { useOpenViduSessionContext } from '../../model/OpenViduSessionContext';
+import { useStageAudioContext } from '../../model/StageAudioContext';
 
 interface SuspendedOverlayProps {
   isPerformer: boolean;
@@ -47,6 +49,12 @@ function ReconnectCountdown({
  */
 export function SuspendedOverlay({ isPerformer }: SuspendedOverlayProps) {
   const socket = useRoomSocketContext();
+  const audio = useStageAudioContext();
+  const pending = useStageStore((state) => state.localInterruption);
+  const media = useOpenViduSessionContext();
+  const lowLatency = useRoomStore((state) => state.session?.mode === 'LOW_LATENCY');
+  const canResume = socket.isConnected && pending === null && (lowLatency || media.isConnected)
+    && audio.isEngineReady && audio.isMrLoaded && audio.error === null;
   const suspendedAt = useStageStore((state) => state.suspendedAt);
   const performerParticipantId = useStageStore((state) => state.performerParticipantId);
   // 가창자가 돌아오면 서버가 유예를 취소하므로, 끊긴 동안에만 남은 시간을 센다.
@@ -86,7 +94,10 @@ export function SuspendedOverlay({ isPerformer }: SuspendedOverlayProps) {
         ) : null}
 
         {isPerformer ? (
-          <StageButton onClick={socket.sendResumeReady}>공연 재개하기</StageButton>
+          <StageButton disabled={!canResume} onClick={socket.sendResumeReady}>
+            {!socket.isConnected ? '서버에 다시 연결하는 중…' : pending ? '공연 상태를 확인하는 중…'
+              : !audio.isMrLoaded ? '음원을 준비하는 중…' : '공연 재개하기'}
+          </StageButton>
         ) : (
           <p className="text-sm text-zinc-400">
             {isPerformerOffline

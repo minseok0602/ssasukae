@@ -132,31 +132,33 @@ class PerformanceRecoveryServiceTest {
   }
 
   @Test
-  @DisplayName("복구 대상으로 들어온 ANALYZING 공연은 재예약 없이 분석 실패로 종료한다")
-  void recoverExpiredFailsAnalyzingPerformanceWithoutRescheduling() {
+  @DisplayName("이전 중지 마감 배치로 조회됐더라도 새 분석 마감 전에는 실패시키지 않는다")
+  void staleDueBatchDoesNotFailNewAnalysisEarly() {
     Room room = playingRoom();
     PerformanceSnapShot analyzing = analyzingSnapshot();
     when(performanceStore.findByPerformanceId(PERFORMANCE_ID)).thenReturn(Optional.of(analyzing));
     when(roomRepository.findByIdForUpdate(ROOM_ID)).thenReturn(Optional.of(room));
-
-    beginTransaction();
-
     service.recoverExpired(PERFORMANCE_ID, PLAYBACK_FINISHED_AT.toInstant().plusSeconds(10));
-
-    verify(performanceStore, never()).save(org.mockito.ArgumentMatchers.any());
-    assertThat(room.getStatus()).isEqualTo(RoomStatus.PREPARING);
+    assertThat(room.getStatus()).isEqualTo(RoomStatus.PLAYING);
+    verify(deadlineStore)
+        .save(
+            PERFORMANCE_ID, PLAYBACK_FINISHED_AT.toInstant().plus(properties.getAnalysisTimeout()));
     verifyNoInteractions(eventPublisher);
+    verify(performanceStore, never()).delete(analyzing);
+  }
 
-    commitTransaction();
-
-    verify(deadlineStore).delete(PERFORMANCE_ID);
-    verify(performanceStore).delete(analyzing);
-    verify(eventPublisher)
-        .publish(
-            ROOM_ID,
-            PerformanceWebSocketEventType.PERFORMANCE_STATE_CHANGED,
-            new PerformanceStateChangedPayload(
-                PERFORMANCE_ID, PerformanceStatus.ANALYZING, PerformanceStatus.ANALYSIS_FAILED));
+  @Test
+  void dueSuspensionReadBeforeReconnectDoesNotCancelReturnedPerformer() {
+    Room room = playingRoom();
+    PerformanceSnapShot suspended =
+        playingSnapshot().reconcileInterruption("socket:old", PLAYBACK_FINISHED_AT, 20000);
+    when(performanceStore.findByPerformanceId(PERFORMANCE_ID)).thenReturn(Optional.of(suspended));
+    when(roomRepository.findByIdForUpdate(ROOM_ID)).thenReturn(Optional.of(room));
+    when(deadlineStore.findDeadline(PERFORMANCE_ID)).thenReturn(Optional.empty());
+    service.recoverExpired(PERFORMANCE_ID, PLAYBACK_FINISHED_AT.toInstant().plusSeconds(20));
+    assertThat(room.getStatus()).isEqualTo(RoomStatus.PLAYING);
+    verifyNoInteractions(eventPublisher);
+    verify(performanceStore, never()).delete(suspended);
   }
 
   @Test

@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-23",
+  "branch": "codex/performer-connection-recovery",
+  "environment": "Isolated local production frontend build, Chrome headless, Spring, MySQL 8.4, Redis 7, OpenVidu 2.32",
+  "media": "Real WebRTC with synthetic camera/microphone and 120 second fixture MR",
+  "cases": [
+    {
+      "case": "REAL_BROWSER_ROOM_CONNECTION",
+      "outcome": "PASS",
+      "rtc": [
+        {
+          "state": "connected",
+          "inbound": 0,
+          "outbound": 275696
+        },
+        {
+          "state": "connected",
+          "inbound": 271586,
+          "outbound": 0
+        }
+      ]
+    },
+    {
+      "case": "SPECTATOR_DISCONNECT_CONTINUES_MEDIA",
+      "outcome": "PASS",
+      "receivedBytesDuringDisconnect": 437975
+    },
+    {
+      "case": "PERFORMER_DISCONNECT_RECONCILE_RESUME",
+      "outcome": "PASS",
+      "frozenPositionMs": 11389,
+      "resumedPositionMs": 11389
+    },
+    {
+      "case": "PERFORMER_RECONNECT_GRACE_EXPIRES",
+      "outcome": "PASS"
+    },
+    {
+      "case": "BACKEND_PROCESS_RESTART_AFTER_GRACE",
+      "outcome": "PASS",
+      "outageMs": 38469
+    }
+  ]
+}

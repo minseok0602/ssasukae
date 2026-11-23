@@ -9,5 +9,7 @@ public interface PerformanceRecoveryDeadlineStore {
 
   void delete(Long performanceId);
 
+  java.util.Optional<Instant> findDeadline(Long performanceId);
+
   List<Long> findDuePerformanceIds(Instant now, int limit);
 }

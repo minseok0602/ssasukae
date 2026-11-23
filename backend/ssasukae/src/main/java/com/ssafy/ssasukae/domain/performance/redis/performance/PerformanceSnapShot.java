@@ -1,12 +1,11 @@
 package com.ssafy.ssasukae.domain.performance.redis.performance;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.ssafy.ssasukae.domain.performance.type.PerformanceStatus;
 import java.time.Duration;
 import java.time.OffsetDateTime;
 import java.util.Arrays;
 import java.util.Objects;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.ssafy.ssasukae.domain.performance.type.PerformanceStatus;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record PerformanceSnapShot(
@@ -26,7 +25,13 @@ public record PerformanceSnapShot(
     // 연결 중단 시 서버에서 저장한 곡 재생 위치
     Long playbackPositionMs,
     PerformanceStatus suspendedFromStatus,
-    OffsetDateTime suspendedAt) {
+    OffsetDateTime suspendedAt,
+    @com.fasterxml.jackson.annotation.JsonInclude(
+            com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
+        String lastInterruptionId,
+    @com.fasterxml.jackson.annotation.JsonInclude(
+            com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
+        OffsetDateTime playbackAnchorAt) {
 
   public PerformanceSnapShot {
     requirePositive(performanceId, "performanceId");
@@ -42,12 +47,43 @@ public record PerformanceSnapShot(
         accumulatedPausedDurationMs == null ? 0L : Math.max(0L, accumulatedPausedDurationMs);
     playbackPositionMs = playbackPositionMs == null ? 0L : Math.max(0L, playbackPositionMs);
     validateTimeline(
+        status, preparedAt, startedAt, playbackFinishedAt, suspendedFromStatus, suspendedAt);
+  }
+
+  public PerformanceSnapShot(
+      Long performanceId,
+      Long roomId,
+      Long performerParticipantId,
+      Long performerUserId,
+      Long songId,
+      PerformanceStatus status,
+      PerformanceSettings settings,
+      OffsetDateTime preparedAt,
+      OffsetDateTime startedAt,
+      OffsetDateTime playbackFinishedAt,
+      Long songDurationMs,
+      Long accumulatedPausedDurationMs,
+      Long playbackPositionMs,
+      PerformanceStatus suspendedFromStatus,
+      OffsetDateTime suspendedAt) {
+    this(
+        performanceId,
+        roomId,
+        performerParticipantId,
+        performerUserId,
+        songId,
         status,
+        settings,
         preparedAt,
         startedAt,
         playbackFinishedAt,
+        songDurationMs,
+        accumulatedPausedDurationMs,
+        playbackPositionMs,
         suspendedFromStatus,
-        suspendedAt);
+        suspendedAt,
+        null,
+        null);
   }
 
   /** 기존 생성 호출과 Redis 데이터의 하위 호환을 위한 생성자입니다. */
@@ -149,9 +185,7 @@ public record PerformanceSnapShot(
 
   public PerformanceSnapShot suspendForPerformerDisconnect(OffsetDateTime at) {
     requireStatus(
-        "가창자 연결 종료로 중단할 수 없는 공연 상태입니다.",
-        PerformanceStatus.PREPARING,
-        PerformanceStatus.PLAYING);
+        "가창자 연결 종료로 중단할 수 없는 공연 상태입니다.", PerformanceStatus.PREPARING, PerformanceStatus.PLAYING);
     Objects.requireNonNull(at, "suspendedAt은 필수입니다.");
 
     if (status == PerformanceStatus.PLAYING) {
@@ -173,7 +207,46 @@ public record PerformanceSnapShot(
         accumulatedPausedDurationMs,
         status == PerformanceStatus.PLAYING ? playbackPositionAt(at) : 0L,
         status,
-        at);
+        at,
+        lastInterruptionId,
+        playbackAnchorAt);
+  }
+
+  /**
+   * The performer reports the actual audio position; retries must not suspend a resumed session.
+   */
+  public PerformanceSnapShot reconcileInterruption(
+      String interruptionId, OffsetDateTime at, long positionMs) {
+    if (Objects.equals(lastInterruptionId, interruptionId)) return this;
+    requireStatus(
+        "진행 중인 공연만 연결 상태를 복구할 수 있습니다.",
+        PerformanceStatus.PREPARING,
+        PerformanceStatus.PLAYING,
+        PerformanceStatus.SUSPENDED);
+    if (playbackAnchorAt != null && at.isBefore(playbackAnchorAt.minusNanos(500_000_000))) {
+      throw new IllegalStateException("이미 재개한 시점 이전의 연결 복구 요청입니다.");
+    }
+    PerformanceStatus from = status == PerformanceStatus.SUSPENDED ? suspendedFromStatus : status;
+    OffsetDateTime freezeAt =
+        status == PerformanceStatus.SUSPENDED && suspendedAt.isBefore(at) ? suspendedAt : at;
+    return new PerformanceSnapShot(
+        performanceId,
+        roomId,
+        performerParticipantId,
+        performerUserId,
+        songId,
+        PerformanceStatus.SUSPENDED,
+        settings,
+        preparedAt,
+        startedAt,
+        playbackFinishedAt,
+        songDurationMs,
+        accumulatedPausedDurationMs,
+        from == PerformanceStatus.PLAYING ? clampPosition(positionMs) : 0L,
+        from,
+        freezeAt,
+        interruptionId,
+        playbackAnchorAt);
   }
 
   public PerformanceSnapShot resumeAfterPerformerReconnect(OffsetDateTime at) {
@@ -199,7 +272,9 @@ public record PerformanceSnapShot(
             : accumulatedPausedDurationMs,
         playbackPositionMs,
         null,
-        null);
+        null,
+        lastInterruptionId,
+        suspendedFromStatus == PerformanceStatus.PLAYING ? at : playbackAnchorAt);
   }
 
   public PerformanceSnapShot changeSettings(PerformanceSettings changedSettings) {
@@ -218,14 +293,16 @@ public record PerformanceSnapShot(
         playbackPositionMs);
   }
 
-
-
   public long playbackPositionAt(OffsetDateTime at) {
     if (startedAt == null) {
       return 0L;
     }
-    if (status == PerformanceStatus.SUSPENDED) {
+    if (status != PerformanceStatus.PLAYING) {
       return clampPosition(playbackPositionMs);
+    }
+    if (playbackAnchorAt != null) {
+      return clampPosition(
+          playbackPositionMs + Math.max(0L, Duration.between(playbackAnchorAt, at).toMillis()));
     }
     long elapsed = Math.max(0L, Duration.between(startedAt, at).toMillis());
     return clampPosition(elapsed - accumulatedPausedDurationMs);
@@ -265,7 +342,9 @@ public record PerformanceSnapShot(
         changedAccumulatedPausedDurationMs,
         changedPlaybackPositionMs,
         suspendedFromStatus,
-        suspendedAt);
+        suspendedAt,
+        lastInterruptionId,
+        playbackAnchorAt);
   }
 
   private long clampPosition(long value) {
@@ -303,7 +382,7 @@ public record PerformanceSnapShot(
         requireNull(playbackFinishedAt, "PLAYING 상태에는 playbackFinishedAt이 없어야 합니다.");
         requireTimeNotBefore(startedAt, preparedAt, "startedAt", "preparedAt");
       }
-      case ANALYZING-> {
+      case ANALYZING -> {
         Objects.requireNonNull(startedAt, status + " 상태에는 startedAt이 필요합니다.");
         Objects.requireNonNull(playbackFinishedAt, status + " 상태에는 playbackFinishedAt이 필요합니다.");
         requireTimeNotBefore(startedAt, preparedAt, "startedAt", "preparedAt");
