@@ -3,6 +3,7 @@ package com.ssafy.ssasukae.domain.card.service;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.times;
@@ -74,6 +75,7 @@ class CardServiceTest {
   @Mock private RoomParticipant participant;
 
   private CardService cardService;
+  private Clock clock;
   private PerformanceSnapShot performance;
   private CardAssignmentSnapshot assignment;
 
@@ -90,6 +92,10 @@ class CardServiceTest {
 
   @BeforeEach
   void setUp() {
+    clock = mock(Clock.class);
+    when(clock.instant()).thenReturn(NOW);
+    when(clock.getZone()).thenReturn(ZoneOffset.UTC);
+    when(cardStateStore.activateRoomCard(any(), any(), any(), any())).thenReturn(true);
     cardService =
         new CardService(
             roomRepository,
@@ -99,7 +105,7 @@ class CardServiceTest {
             cardStateStore,
             eventPublisher,
             taskScheduler,
-            Clock.fixed(NOW, ZoneOffset.UTC));
+            clock);
 
     OffsetDateTime preparedAt = OffsetDateTime.parse("2026-07-29T19:58:00+09:00");
     performance =
@@ -126,10 +132,13 @@ class CardServiceTest {
             null);
 
     when(roomRepository.findByIdForUpdate(ROOM_ID)).thenReturn(Optional.of(room));
+    when(room.getId()).thenReturn(ROOM_ID);
     when(room.getMode()).thenReturn(RoomMode.BATTLE);
     when(room.getStatus()).thenReturn(RoomStatus.PLAYING);
     when(participantRepository.findByRoomIdAndUserId(ROOM_ID, USER_ID))
         .thenReturn(Optional.of(participant));
+    when(participantRepository.findById(PARTICIPANT_ID)).thenReturn(Optional.of(participant));
+    when(participant.getRoom()).thenReturn(room);
     when(participant.getId()).thenReturn(PARTICIPANT_ID);
     when(participant.isOnline()).thenReturn(true);
     when(performanceStore.findActiveByRoomId(ROOM_ID)).thenReturn(Optional.of(performance));
@@ -150,11 +159,15 @@ class CardServiceTest {
 
     ArgumentCaptor<Runnable> activationCaptor = ArgumentCaptor.forClass(Runnable.class);
     verify(taskScheduler).schedule(activationCaptor.capture(), any(Instant.class));
+    when(clock.instant()).thenReturn(NOW.plusSeconds(3));
     activationCaptor.getValue().run();
 
     verify(performanceStore, never()).replace(any(), any());
-    verify(cardStateStore, times(2)).saveRoomCard(roomCardCaptor.capture());
-    RoomCardSnapshot active = roomCardCaptor.getAllValues().get(2);
+    ArgumentCaptor<RoomCardSnapshot> activeCaptor = ArgumentCaptor.forClass(RoomCardSnapshot.class);
+    verify(cardStateStore)
+        .activateRoomCard(eq(pending), activeCaptor.capture(), eq(assignment), any());
+    verify(cardStateStore, times(1)).saveRoomCard(any());
+    RoomCardSnapshot active = activeCaptor.getValue();
     assertThat(active.status()).isEqualTo(RoomCardStatus.ACTIVE);
     assertThat(active.previousValue()).isNull();
   }

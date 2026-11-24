@@ -1,0 +1,37 @@
+[
+  {
+    "tag": "ssasukae-card-experiment:candidate",
+    "id": "sha256:72d31c774a8fcc0daac54b1391a05526526809232422ebe219cefbda8877b0cf",
+    "repoDigests": [
+      "ssasukae-card-experiment@sha256:72d31c774a8fcc0daac54b1391a05526526809232422ebe219cefbda8877b0cf"
+    ]
+  },
+  {
+    "tag": "ssasukae-lb-experiment:local",
+    "id": "sha256:190aa773e429389f6f570bcaa441a0e664f37726342d84f0430ff55566188191",
+    "repoDigests": [
+      "ssasukae-lb-experiment@sha256:190aa773e429389f6f570bcaa441a0e664f37726342d84f0430ff55566188191"
+    ]
+  },
+  {
+    "tag": "haproxy:3.2-alpine",
+    "id": "sha256:7816a9801a6846b912bc37e48529808e2fa87c3c47992441940f68e393ebcfeb",
+    "repoDigests": [
+      "haproxy@sha256:7816a9801a6846b912bc37e48529808e2fa87c3c47992441940f68e393ebcfeb"
+    ]
+  },
+  {
+    "tag": "redis:7-alpine",
+    "id": "sha256:7f7d30b7fdd09467bac58198a1f166dd69789d348d4fe859cccb20e0cf287fbe",
+    "repoDigests": [
+      "redis@sha256:7f7d30b7fdd09467bac58198a1f166dd69789d348d4fe859cccb20e0cf287fbe"
+    ]
+  },
+  {
+    "tag": "mysql:8.4",
+    "id": "sha256:c592c15aaf4a1961e15d82eb31ea5987dda862d1c4b1e93424438c0e91dc1f8d",
+    "repoDigests": [
+      "mysql@sha256:c592c15aaf4a1961e15d82eb31ea5987dda862d1c4b1e93424438c0e91dc1f8d"
+    ]
+  }
+]

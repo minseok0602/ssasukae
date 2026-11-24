@@ -8,17 +8,36 @@ public interface CardStateStore {
 
   // 카드 할당 정보 저장
   void saveAssignment(CardAssignmentSnapshot assignment);
+
   // 카드 할당 정보 가져옴
   Optional<CardAssignmentSnapshot> findAssignment(
       Long roomId, Long performanceId, Long participantId);
+
   // 공연에 배정된 모든 카드 정보 가져옴
   List<CardAssignmentSnapshot> findAssignments(Long roomId, Long performanceId);
+
   // 현재 방 카드 사용 상태 가져옴
   Optional<RoomCardSnapshot> findRoomCard(Long roomId);
+
   // 방 카드 사용 정보 저장
   void saveRoomCard(RoomCardSnapshot roomCard);
+
   // 방 카드 사용 정보 삭제
   void deleteRoomCard(Long roomId);
+
+  // Snapshot discovery also repairs jobs lost before an optional scheduling index could be written.
+  List<Long> findRoomIdsWithCards();
+
+  // Assignment consumption and PENDING -> ACTIVE must succeed together.
+  boolean activateRoomCard(
+      RoomCardSnapshot expected,
+      RoomCardSnapshot active,
+      CardAssignmentSnapshot assignment,
+      CardAssignmentSnapshot used);
+
+  // A stale callback may not remove a later card in the same room/performance.
+  boolean removeRoomCard(RoomCardSnapshot expected);
+
   // 공연 정보에서 카드 정보 삭제
   void deleteCardState(Long roomId, Long performanceId);
 }

@@ -1,0 +1,1922 @@
+{
+  "gitSha": "8366a6f3c627cbff207c9531b7c105ba9f02ec3e",
+  "java": "eclipse-temurin:17-jdk-jammy",
+  "dependencies": [
+    {
+      "group": "biz.aQute.bnd",
+      "artifact": "biz.aQute.bnd.annotation",
+      "version": "7.1.0",
+      "sha256": "f69c2de3a695c113d125ac8053c92a680a3ce9d02ea25845095cf2d4626a7663"
+    },
+    {
+      "group": "ch.qos.logback",
+      "artifact": "logback-classic",
+      "version": "1.5.34",
+      "sha256": "b65e05076a5c1aadb659b4fe4bc5fee31cb26cd70390292eb03e4a7a24cff10f"
+    },
+    {
+      "group": "ch.qos.logback",
+      "artifact": "logback-core",
+      "version": "1.5.34",
+      "sha256": "42eda264c0c650c2bec59e66151a88b708a8663dc1b49d788202d53e78b8caae"
+    },
+    {
+      "group": "com.diffplug.durian",
+      "artifact": "durian-collect",
+      "version": "1.2.0",
+      "sha256": "b194c0b88021cc116c21c1dc76f49c2c1fe175af5bcb74c8ba67b9dbbf9a48cc"
+    },
+    {
+      "group": "com.diffplug.durian",
+      "artifact": "durian-core",
+      "version": "1.2.0",
+      "sha256": "17ed0aacb3a3c16323332168bbdead8694f32800b2b47d69d4a4c49b114d5dae"
+    },
+    {
+      "group": "com.diffplug.durian",
+      "artifact": "durian-io",
+      "version": "1.2.0",
+      "sha256": "095fd1dc77888c073f0be39a018156ee526722798b09de9e285ef2135e16eac4"
+    },
+    {
+      "group": "com.diffplug.durian",
+      "artifact": "durian-swt.os",
+      "version": "4.3.0",
+      "sha256": "81e2b639a7e4be6dc9b7245713cf06f5cab51f29db2e16b9b57645c96fde2884"
+    },
+    {
+      "group": "com.diffplug.spotless",
+      "artifact": "spotless-lib",
+      "version": "4.1.0",
+      "sha256": "d9d5e5ce724a4071c3b6d96433744f3b69a27c66e0f2d7ed372b7a1df612c0a1"
+    },
+    {
+      "group": "com.diffplug.spotless",
+      "artifact": "spotless-lib-extra",
+      "version": "4.1.0",
+      "sha256": "f3d2d849d5252fdc3692a9b9e555e0ed2c4b6f6212044bbf885a27847a52fa1d"
+    },
+    {
+      "group": "com.diffplug.spotless",
+      "artifact": "spotless-plugin-gradle",
+      "version": "8.1.0",
+      "sha256": "e7426196edf79c09ba8a354ba15748a20a94a3ade7cc51ff872e2ba83c5958c1"
+    },
+    {
+      "group": "com.fasterxml",
+      "artifact": "classmate",
+      "version": "1.7.3",
+      "sha256": "75fbda45456f123fb6e2028a6189442d8d0730b357adce4c0a6d7e789f70669b"
+    },
+    {
+      "group": "com.fasterxml.jackson.core",
+      "artifact": "jackson-annotations",
+      "version": "2.21",
+      "sha256": "53ca085f4a150f703f49e1aabd935bd03b43e1ea3d55d135438292af22cef56b"
+    },
+    {
+      "group": "com.fasterxml.jackson.core",
+      "artifact": "jackson-core",
+      "version": "2.21.4",
+      "sha256": "4b40a06396f239f8de2da57419adde6e94e5edc18a2171d471ea05eeed4e5c2d"
+    },
+    {
+      "group": "com.fasterxml.jackson.core",
+      "artifact": "jackson-databind",
+      "version": "2.21.4",
+      "sha256": "3888e9e69ab66fbacaacc9aea0e9ffbf15368288e4aca468b024dba11c09fbf9"
+    },
+    {
+      "group": "com.github.docker-java",
+      "artifact": "docker-java-api",
+      "version": "3.7.1",
+      "sha256": "dad153d484b1f4ef009e2fdbad27e07aeb3191122da52b8985507ac504300081"
+    },
+    {
+      "group": "com.github.docker-java",
+      "artifact": "docker-java-transport",
+      "version": "3.7.1",
+      "sha256": "d15eec8034bf0f92c2a48ca9172691804048115c96dc853272f9486fa2695c3c"
+    },
+    {
+      "group": "com.github.docker-java",
+      "artifact": "docker-java-transport-zerodep",
+      "version": "3.7.1",
+      "sha256": "b89bdb1754160323597f9ea32a7fe7a4a3aa8f5b3b43b88e8d71fff3b267ab21"
+    },
+    {
+      "group": "com.github.stephenc.jcip",
+      "artifact": "jcip-annotations",
+      "version": "1.0-1",
+      "sha256": "4fccff8382aafc589962c4edb262f6aa595e34f1e11e61057d1c6a96e8fc7323"
+    },
+    {
+      "group": "com.google.code.findbugs",
+      "artifact": "jsr305",
+      "version": "3.0.2",
+      "sha256": "766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7"
+    },
+    {
+      "group": "com.google.code.gson",
+      "artifact": "gson",
+      "version": "2.13.2",
+      "sha256": "dd0ce1b55a3ed2080cb70f9c655850cda86c206862310009dcb5e5c95265a5e0"
+    },
+    {
+      "group": "com.google.errorprone",
+      "artifact": "error_prone_annotations",
+      "version": "2.41.0",
+      "sha256": "a56e782b5b50811ac204073a355a21d915a2107fce13ec711331ad036f660fcc"
+    },
+    {
+      "group": "com.google.googlejavaformat",
+      "artifact": "google-java-format",
+      "version": "1.28.0",
+      "sha256": "41dfe4d1012794ed15e0ffd70f89fd4fa65d5f15ce0bc0c70f8c2c127d6d010d"
+    },
+    {
+      "group": "com.google.guava",
+      "artifact": "failureaccess",
+      "version": "1.0.1",
+      "sha256": "a171ee4c734dd2da837e4b16be9df4661afab72a41adaf31eb84dfdaf936ca26"
+    },
+    {
+      "group": "com.google.guava",
+      "artifact": "guava",
+      "version": "32.1.3-jre",
+      "sha256": "6d4e2b5a118aab62e6e5e29d185a0224eed82c85c40ac3d33cf04a270c3b3744"
+    },
+    {
+      "group": "com.google.guava",
+      "artifact": "listenablefuture",
+      "version": "9999.0-empty-to-avoid-conflict-with-guava",
+      "sha256": "b372a037d4230aa57fbeffdef30fd6123f9c0c2db85d0aced00c91b974f33f99"
+    },
+    {
+      "group": "com.googlecode.concurrent-trees",
+      "artifact": "concurrent-trees",
+      "version": "2.6.1",
+      "sha256": "04e3724984e2a5cbf55606cfa372a5bd3d3c5d2a21533a7004e3cde539761fa5"
+    },
+    {
+      "group": "com.googlecode.javaewah",
+      "artifact": "JavaEWAH",
+      "version": "1.2.3",
+      "sha256": "d65226949713c4c61a784f41c51167e7b0316f93764398ebba9e4336b3d954c2"
+    },
+    {
+      "group": "com.jayway.jsonpath",
+      "artifact": "json-path",
+      "version": "2.10.0",
+      "sha256": "890daa95dd3892d34d9fabc27cd5153656e6f369358625c88f4dc7b79cbd6c5a"
+    },
+    {
+      "group": "com.mysql",
+      "artifact": "mysql-connector-j",
+      "version": "9.7.0",
+      "sha256": "0353648eaa1c91e0f4020c959abf756bc866ffd583df22ae6b6f6e0cbd43eb44"
+    },
+    {
+      "group": "com.nimbusds",
+      "artifact": "content-type",
+      "version": "2.3",
+      "sha256": "60349793e006fba96b532cb0c21e10e969fe0db8d87f91c3b9eaf82ba2998895"
+    },
+    {
+      "group": "com.nimbusds",
+      "artifact": "lang-tag",
+      "version": "1.7",
+      "sha256": "e8c1c594e2425bdbea2d860de55c69b69fc5d59454452449a0f0913c2a5b8a31"
+    },
+    {
+      "group": "com.nimbusds",
+      "artifact": "nimbus-jose-jwt",
+      "version": "10.9",
+      "sha256": "64d613d91140bad0dab8f0c41960f919ec8705a9ced9418146598b4b3ae71349"
+    },
+    {
+      "group": "com.nimbusds",
+      "artifact": "oauth2-oidc-sdk",
+      "version": "11.37.2",
+      "sha256": "b66e74746dcf516d77f20344e6fbcbcffe1b483b5cf1ad41ea81cec83cb27b3c"
+    },
+    {
+      "group": "com.squareup.okhttp3",
+      "artifact": "okhttp",
+      "version": "4.12.0",
+      "sha256": "b1050081b14bb7a3a7e55a4d3ef01b5dcfabc453b4573a4fc019767191d5f4e0"
+    },
+    {
+      "group": "com.squareup.okio",
+      "artifact": "okio-jvm",
+      "version": "3.6.0",
+      "sha256": "67543f0736fc422ae927ed0e504b98bc5e269fda0d3500579337cb713da28412"
+    },
+    {
+      "group": "com.sun.istack",
+      "artifact": "istack-commons-runtime",
+      "version": "4.1.2",
+      "sha256": "7fd6792361f4dd00f8c56af4a20cecc0066deea4a8f3dec38348af23fc2296ee"
+    },
+    {
+      "group": "com.vaadin.external.google",
+      "artifact": "android-json",
+      "version": "0.0.20131108.vaadin1",
+      "sha256": "dfb7bae2f404cfe0b72b4d23944698cb716b7665171812a0a4d0f5926c0fac79"
+    },
+    {
+      "group": "com.zaxxer",
+      "artifact": "HikariCP",
+      "version": "7.0.2",
+      "sha256": "f1e612fa27345be3107a85431e8a8aeb205c15364ab2f2d411e40a9d7bb08095"
+    },
+    {
+      "group": "commons-beanutils",
+      "artifact": "commons-beanutils",
+      "version": "1.11.0",
+      "sha256": "9e44ba68ec9a3f21286fa2a8bbb003b735c0f69101bb43144b79f4f8aaa74709"
+    },
+    {
+      "group": "commons-codec",
+      "artifact": "commons-codec",
+      "version": "1.21.0",
+      "sha256": "4da851cb6abfb98bfe9eb77c5e5fc47f5414fa28b94e21b7fd9a646705dc167f"
+    },
+    {
+      "group": "commons-collections",
+      "artifact": "commons-collections",
+      "version": "3.2.2",
+      "sha256": "eeeae917917144a68a741d4c0dff66aa5c5c5fd85593ff217bced3fc8ca783b8"
+    },
+    {
+      "group": "commons-digester",
+      "artifact": "commons-digester",
+      "version": "2.1",
+      "sha256": "e0b2b980a84fc6533c5ce291f1917b32c507f62bcad64198fff44368c2196a3d"
+    },
+    {
+      "group": "commons-io",
+      "artifact": "commons-io",
+      "version": "2.20.0",
+      "sha256": "df90bba0fe3cb586b7f164e78fe8f8f4da3f2dd5c27fa645f888100ccc25dd72"
+    },
+    {
+      "group": "commons-logging",
+      "artifact": "commons-logging",
+      "version": "1.3.6",
+      "sha256": "f8ead8943401081dea0aa824b5b1ba40a0e4ed297a572a0f02258150a0b62357"
+    },
+    {
+      "group": "commons-validator",
+      "artifact": "commons-validator",
+      "version": "1.10.0",
+      "sha256": "0d1600cddc24af7f49b5eb01e31adda3ce3b25f236c8c75eaecdf78428469eb9"
+    },
+    {
+      "group": "dev.equo.ide",
+      "artifact": "solstice",
+      "version": "1.8.1",
+      "sha256": "6e5ba2cce813be1d71ccdc2ecf3e49271b14e691bfbbb1a114cf3a30e773b10d"
+    },
+    {
+      "group": "io.jsonwebtoken",
+      "artifact": "jjwt-api",
+      "version": "0.12.6",
+      "sha256": "8fabe0be1dfad1c823dc43137453e017d2c83f376422c83e017d9dd1043e6984"
+    },
+    {
+      "group": "io.jsonwebtoken",
+      "artifact": "jjwt-impl",
+      "version": "0.12.6",
+      "sha256": "ad80ceda467ddab64f0e729257dd5f72f61487cc3b92e696270e620f0d88168f"
+    },
+    {
+      "group": "io.jsonwebtoken",
+      "artifact": "jjwt-jackson",
+      "version": "0.12.6",
+      "sha256": "8f8c293730fa0241a0f882b6128c3e5b2c07f3ff3e6391126ef71e73ecb24ea0"
+    },
+    {
+      "group": "io.lettuce",
+      "artifact": "lettuce-core",
+      "version": "7.5.2.RELEASE",
+      "sha256": "86e245a6cfc36a40aaa1f54027e639a70cb4008d12717164041aefe9bbd072c1"
+    },
+    {
+      "group": "io.micrometer",
+      "artifact": "micrometer-commons",
+      "version": "1.17.0",
+      "sha256": "03919dc71e2417ec4b5c254c4ba924963c972e124190f73cdcb68ed51c6eede6"
+    },
+    {
+      "group": "io.micrometer",
+      "artifact": "micrometer-core",
+      "version": "1.17.0",
+      "sha256": "73503e701a377fafeaf33b71b9b8910a8d7884cbba88ab27971b33b3753b65aa"
+    },
+    {
+      "group": "io.micrometer",
+      "artifact": "micrometer-jakarta9",
+      "version": "1.17.0",
+      "sha256": "4ae9dbc9072fea8c36684a745e0e944b9540fd15027dfe7af0a186f8df43272c"
+    },
+    {
+      "group": "io.micrometer",
+      "artifact": "micrometer-observation",
+      "version": "1.17.0",
+      "sha256": "2fc95a327578d3b2a81c3ff40e646a4a21e46b0153ccbbf91690142bf80d9661"
+    },
+    {
+      "group": "io.micrometer",
+      "artifact": "micrometer-registry-prometheus",
+      "version": "1.17.0",
+      "sha256": "6fc1177ec572a4bec332d00515859cf4a7adec232d66d2b5bedb4ad96456a4e3"
+    },
+    {
+      "group": "io.netty",
+      "artifact": "netty-buffer",
+      "version": "4.2.15.Final",
+      "sha256": "1361fd9c9ba85b9831cf54a1b2e45ddc3ce34a768931726c099d3f5ef0efe4a3"
+    },
+    {
+      "group": "io.netty",
+      "artifact": "netty-codec",
+      "version": "4.2.15.Final",
+      "sha256": "153b11a166459733af79fb0d4667f30bfa39792896f689b21c93a4a4091387ea"
+    },
+    {
+      "group": "io.netty",
+      "artifact": "netty-codec-base",
+      "version": "4.2.15.Final",
+      "sha256": "2c6d39d7270628b8cfc3166fbd7a93d595958e59c461bc32ddb383c8c91bf811"
+    },
+    {
+      "group": "io.netty",
+      "artifact": "netty-codec-compression",
+      "version": "4.2.15.Final",
+      "sha256": "4adaa5cdd4d2e9b50b23e4c3eff42e73de6eb40848718b3aa84cd5b454da6ce8"
+    },
+    {
+      "group": "io.netty",
+      "artifact": "netty-codec-dns",
+      "version": "4.2.15.Final",
+      "sha256": "c5e2c05b4faeba3cf374cc6af29d6f4a7e969d7ca222be958e0800c79a02ee4e"
+    },
+    {
+      "group": "io.netty",
+      "artifact": "netty-codec-http",
+      "version": "4.2.15.Final",
+      "sha256": "76ae57e87af37b3c4107140f50b9244b1456163a6a225510838f7c5a4458ec22"
+    },
+    {
+      "group": "io.netty",
+      "artifact": "netty-codec-http2",
+      "version": "4.2.15.Final",
+      "sha256": "4a9b052bd815c765d9c05e27b32abbd32a2c7c3e3364ccb992ce71da1a26bc0d"
+    },
+    {
+      "group": "io.netty",
+      "artifact": "netty-codec-marshalling",
+      "version": "4.2.15.Final",
+      "sha256": "bbc655b5253387f566b25d4185152951f0121fb3afef2c352e7aa52b9fb965d3"
+    },
+    {
+      "group": "io.netty",
+      "artifact": "netty-codec-protobuf",
+      "version": "4.2.15.Final",
+      "sha256": "ecf3a24695374b3544700d94db56875da90c1dfbe1e43c744dcc15e1e8998a01"
+    },
+    {
+      "group": "io.netty",
+      "artifact": "netty-common",
+      "version": "4.2.15.Final",
+      "sha256": "78206aa7f6d197caa926291408c01889b6b910ca0f74017d3fcbdaccf9562959"
+    },
+    {
+      "group": "io.netty",
+      "artifact": "netty-handler",
+      "version": "4.2.15.Final",
+      "sha256": "99b59e4bea72220d2aed52df8baf37d97431b06ade0b135226cdf73168975eab"
+    },
+    {
+      "group": "io.netty",
+      "artifact": "netty-resolver",
+      "version": "4.2.15.Final",
+      "sha256": "24318497f2a3a645964fed418f48879ba11365cab8e1f8d66c47fa7da15ef19a"
+    },
+    {
+      "group": "io.netty",
+      "artifact": "netty-resolver-dns",
+      "version": "4.2.15.Final",
+      "sha256": "2e8dd2d861775483d689329ab2546045647c8f8bf5ae3ed2dd48eefbb748952d"
+    },
+    {
+      "group": "io.netty",
+      "artifact": "netty-transport",
+      "version": "4.2.15.Final",
+      "sha256": "9fb671e96651066cf1a28dad3f1382c7c99df5b8326d4a214d9a375b311f8dc1"
+    },
+    {
+      "group": "io.netty",
+      "artifact": "netty-transport-classes-epoll",
+      "version": "4.2.15.Final",
+      "sha256": "be509407fd71a4b83378567c613420db544d659bb522df7b253a1dbe8ca297fe"
+    },
+    {
+      "group": "io.netty",
+      "artifact": "netty-transport-native-unix-common",
+      "version": "4.2.15.Final",
+      "sha256": "b9ea9fc5ad5eba04e99afdff75b2eb97b5ddfb2ad772e2f2ef5d8f277f3cbd76"
+    },
+    {
+      "group": "io.openvidu",
+      "artifact": "openvidu-java-client",
+      "version": "2.32.0",
+      "sha256": "91624bda5be2ee88a1f21d8af9292cbb7af3f08a4a06ff5c65d016eab5907a52"
+    },
+    {
+      "group": "io.projectreactor",
+      "artifact": "reactor-core",
+      "version": "3.8.6",
+      "sha256": "ffc646b225465efce55d3ea350f1bcd1d27d4a56e912323e316dd8e6d04bff11"
+    },
+    {
+      "group": "io.prometheus",
+      "artifact": "prometheus-metrics-config",
+      "version": "1.5.1",
+      "sha256": "77ac62a4676e82d5428f259da4541b30c9f6dba245d25ed1792e88022ce0f849"
+    },
+    {
+      "group": "io.prometheus",
+      "artifact": "prometheus-metrics-core",
+      "version": "1.5.1",
+      "sha256": "1c2e4dc5fc86a07362d3d2c1fce11793386f00451dba59182e44d4044dd4fc2f"
+    },
+    {
+      "group": "io.prometheus",
+      "artifact": "prometheus-metrics-exposition-formats",
+      "version": "1.5.1",
+      "sha256": "d21ac460c15baa4949101c72dc59cd80b7c7d359578be68b635fcf8aed057ab9"
+    },
+    {
+      "group": "io.prometheus",
+      "artifact": "prometheus-metrics-exposition-textformats",
+      "version": "1.5.1",
+      "sha256": "4b39c6034b2f63865e12a7ef297a5a3d88efa06fcd90c9ff1a5fccfac80289f5"
+    },
+    {
+      "group": "io.prometheus",
+      "artifact": "prometheus-metrics-model",
+      "version": "1.5.1",
+      "sha256": "381d107abe62e353cdefee3f01e0ee4d71631ae155ba528f08c9c5393da1183e"
+    },
+    {
+      "group": "io.prometheus",
+      "artifact": "prometheus-metrics-tracer-common",
+      "version": "1.5.1",
+      "sha256": "51e6e5f292bf78ceaf0fbd9983dfc658e36be4a44dd1d881ffb869a0f5274e9d"
+    },
+    {
+      "group": "io.spring.gradle",
+      "artifact": "dependency-management-plugin",
+      "version": "1.1.7",
+      "sha256": "9e885eec4fc0b7152a7bba1664004085c6663a3c93b0a62463be7308b005be4c"
+    },
+    {
+      "group": "jakarta.activation",
+      "artifact": "jakarta.activation-api",
+      "version": "2.1.4",
+      "sha256": "c9db52100ce6c8aac95cc39075f95720d2e561b11f8051b81c121ad4effd7004"
+    },
+    {
+      "group": "jakarta.annotation",
+      "artifact": "jakarta.annotation-api",
+      "version": "3.0.0",
+      "sha256": "b01f55552284cfb149411e64eabca75e942d26d2e1786b32914250e4330afaa2"
+    },
+    {
+      "group": "jakarta.inject",
+      "artifact": "jakarta.inject-api",
+      "version": "2.0.1",
+      "sha256": "f7dc98062fccf14126abb751b64fab12c312566e8cbdc8483598bffcea93af7c"
+    },
+    {
+      "group": "jakarta.persistence",
+      "artifact": "jakarta.persistence-api",
+      "version": "3.2.0",
+      "sha256": "be8a26b0e75c84c1b7600f759256fbc68d60333d89ec0ce3f784fc3ffa09aa8c"
+    },
+    {
+      "group": "jakarta.transaction",
+      "artifact": "jakarta.transaction-api",
+      "version": "2.0.1",
+      "sha256": "50c0a7c760c13ae6c042acf182b28f0047413db95b4636fb8879bcffab5ba875"
+    },
+    {
+      "group": "jakarta.validation",
+      "artifact": "jakarta.validation-api",
+      "version": "3.1.1",
+      "sha256": "63ce00156388c365f3ac1be71fcfaf114682fc0c452020b5df6e7ec236e142ab"
+    },
+    {
+      "group": "jakarta.xml.bind",
+      "artifact": "jakarta.xml.bind-api",
+      "version": "4.0.5",
+      "sha256": "5e489b6c874c4119e003ff1403db523ee3a8959ec499f3de29e77245efccf216"
+    },
+    {
+      "group": "net.bytebuddy",
+      "artifact": "byte-buddy",
+      "version": "1.18.10",
+      "sha256": "8b31f4ea806afaa900b67bffd8498760d1f65464f4c2ea78cdbda2f3e633898b"
+    },
+    {
+      "group": "net.bytebuddy",
+      "artifact": "byte-buddy-agent",
+      "version": "1.18.10",
+      "sha256": "9cfa3c71c8f07bfb5f4c3c68db7715940d792801eba82d346fc343f7bd7c2401"
+    },
+    {
+      "group": "net.java.dev.jna",
+      "artifact": "jna",
+      "version": "5.18.1",
+      "sha256": "260c4b1e22b1db9e110ee441c4f13ce115f841fa48c41d78750986214b395557"
+    },
+    {
+      "group": "net.java.dev.jna",
+      "artifact": "jna-platform",
+      "version": "5.17.0",
+      "sha256": "b7e3d46c87bad2eb409b0e704916bcd81206168e357312dfddd0e253679cd9e0"
+    },
+    {
+      "group": "net.minidev",
+      "artifact": "accessors-smart",
+      "version": "2.6.0",
+      "sha256": "222c9f547bb20a99fc486403a398352d1306fb671b38abd7ecab6401df170e61"
+    },
+    {
+      "group": "net.minidev",
+      "artifact": "json-smart",
+      "version": "2.6.0",
+      "sha256": "1ae4b561458afb540be8ec5c6dbb4f2e715a319a7ae64854998aaf924770d61b"
+    },
+    {
+      "group": "org.antlr",
+      "artifact": "antlr4-runtime",
+      "version": "4.13.2",
+      "sha256": "dd3e8a13a2d669bf84fb8d834de35ce4875f27157698d206241ec8488aadcaf7"
+    },
+    {
+      "group": "org.apache.commons",
+      "artifact": "commons-compress",
+      "version": "1.28.0",
+      "sha256": "e1522945218456f3649a39bc4afd70ce4bd466221519dba7d378f2141a4642ca"
+    },
+    {
+      "group": "org.apache.commons",
+      "artifact": "commons-lang3",
+      "version": "3.20.0",
+      "sha256": "69e5c9fa35da7a51a5fd2099dfe56a2d8d32cf233e2f6d770e796146440263f4"
+    },
+    {
+      "group": "org.apache.httpcomponents.client5",
+      "artifact": "httpclient5",
+      "version": "5.6.1",
+      "sha256": "1e3d8444c3c27772e4b9d42a790f06b3345a8ece4fd16d00981f2f2460e1e772"
+    },
+    {
+      "group": "org.apache.httpcomponents.core5",
+      "artifact": "httpcore5",
+      "version": "5.4.2",
+      "sha256": "7c34a25506e7207b6748cef9e91163ed03081bee805cef930d82e1d8761d62f1"
+    },
+    {
+      "group": "org.apache.httpcomponents.core5",
+      "artifact": "httpcore5-h2",
+      "version": "5.4.2",
+      "sha256": "a70da7280f63ddbb7da2869a2e7aba7d8bde3f2aff050e1324ef60ea1d9fab43"
+    },
+    {
+      "group": "org.apache.logging.log4j",
+      "artifact": "log4j-api",
+      "version": "2.25.4",
+      "sha256": "c4b642a7f047275215de117e0e3847eb2c7711d84a0aa7433e7b3c096daf341d"
+    },
+    {
+      "group": "org.apache.logging.log4j",
+      "artifact": "log4j-to-slf4j",
+      "version": "2.25.4",
+      "sha256": "d7b78fc0aaaa5e8ada388b29d718b0ab187e512965bed0b259bb4ab299f13db2"
+    },
+    {
+      "group": "org.apache.tomcat.embed",
+      "artifact": "tomcat-embed-core",
+      "version": "11.0.22",
+      "sha256": "78cd7cd7c104b6b87142c1b0bd902e1ce005b0245c3cefa8a06759148947200b"
+    },
+    {
+      "group": "org.apache.tomcat.embed",
+      "artifact": "tomcat-embed-el",
+      "version": "11.0.22",
+      "sha256": "1b34c33b858c141df36c501b4d809e68036c406bca3671a86facae297917c7de"
+    },
+    {
+      "group": "org.apache.tomcat.embed",
+      "artifact": "tomcat-embed-websocket",
+      "version": "11.0.22",
+      "sha256": "210e0c7ab194a76cc7283df0be365276091b042369dae125fb477828ba67e922"
+    },
+    {
+      "group": "org.apiguardian",
+      "artifact": "apiguardian-api",
+      "version": "1.1.2",
+      "sha256": "b509448ac506d607319f182537f0b35d71007582ec741832a1f111e5b5b70b38"
+    },
+    {
+      "group": "org.aspectj",
+      "artifact": "aspectjweaver",
+      "version": "1.9.25.1",
+      "sha256": "4fe86fdc18faea571f29129c70eaad5d121363504a06d7907be88f6c60ba3116"
+    },
+    {
+      "group": "org.assertj",
+      "artifact": "assertj-core",
+      "version": "3.27.7",
+      "sha256": "c4a445426c3c2861666863b842cc4ec7bbb1c4226fefd370b6d2fe83d6c4ff0f"
+    },
+    {
+      "group": "org.awaitility",
+      "artifact": "awaitility",
+      "version": "4.3.0",
+      "sha256": "ee58568ea5945dcf988551501655183dc184e23e45a8e013fdfd9036194e6f7b"
+    },
+    {
+      "group": "org.checkerframework",
+      "artifact": "checker-qual",
+      "version": "3.37.0",
+      "sha256": "e4ce1376cc2735e1dde220b62ad0913f51297704daad155a33f386bc5db0d9f7"
+    },
+    {
+      "group": "org.eclipse.angus",
+      "artifact": "angus-activation",
+      "version": "2.0.3",
+      "sha256": "a6bd35c538cf90fff941ad6258c40c08fca0b5c9c3f536c657114f27ce0527a7"
+    },
+    {
+      "group": "org.eclipse.jgit",
+      "artifact": "org.eclipse.jgit",
+      "version": "7.4.0.202509020913-r",
+      "sha256": "9bc7cf2d0400a130e3405e4ae9c78775d9bdb1037098d00b2d8ea79436f3a7f3"
+    },
+    {
+      "group": "org.eclipse.platform",
+      "artifact": "org.eclipse.osgi",
+      "version": "3.23.200",
+      "sha256": "8d94058ead3f4651900166924a677c3beb6e996f072fabf385ffdd70510bc493"
+    },
+    {
+      "group": "org.glassfish.jaxb",
+      "artifact": "jaxb-core",
+      "version": "4.0.9",
+      "sha256": "6b014df25d22c8446cc2df0a378c5b2137747f197a731d99eb24c756b26f7e8d"
+    },
+    {
+      "group": "org.glassfish.jaxb",
+      "artifact": "jaxb-runtime",
+      "version": "4.0.9",
+      "sha256": "93e09b7316b6af68d6e2083e4c297daf28e8957f45d725077af812c0b12c39ab"
+    },
+    {
+      "group": "org.glassfish.jaxb",
+      "artifact": "txw2",
+      "version": "4.0.9",
+      "sha256": "d6343e5945d87266ca4e8974a0a2a876e1bd147a00fb65ed3f2e1a3a00f3a82a"
+    },
+    {
+      "group": "org.hamcrest",
+      "artifact": "hamcrest",
+      "version": "3.0",
+      "sha256": "5d66b6a4a680755cb6ed7cb104fa7835ef644667586ff0737adeb977c39ecdbc"
+    },
+    {
+      "group": "org.hdrhistogram",
+      "artifact": "HdrHistogram",
+      "version": "2.2.2",
+      "sha256": "22d1d4316c4ec13a68b559e98c8256d69071593731da96136640f864fa14fad8"
+    },
+    {
+      "group": "org.hibernate.models",
+      "artifact": "hibernate-models",
+      "version": "1.1.1",
+      "sha256": "7cb645f2ebe5fcb63e21d26259cef62d93a1ca77c400bda6992c92cb19826a89"
+    },
+    {
+      "group": "org.hibernate.orm",
+      "artifact": "hibernate-core",
+      "version": "7.4.1.Final",
+      "sha256": "e4bfe7df423f3555f322eefb1ab51f28df439844610ef76c36d92a85d483004e"
+    },
+    {
+      "group": "org.hibernate.validator",
+      "artifact": "hibernate-validator",
+      "version": "9.1.0.Final",
+      "sha256": "4dea20c780d12e8ad6e1fe7d695460af74f8668df9eb58910991919194412188"
+    },
+    {
+      "group": "org.jboss.logging",
+      "artifact": "jboss-logging",
+      "version": "3.6.3.Final",
+      "sha256": "7c12ee575508f81e22b1db9334b969d0ec54ef0fd1dcba24eeab1a44235fc366"
+    },
+    {
+      "group": "org.jetbrains",
+      "artifact": "annotations",
+      "version": "17.0.0",
+      "sha256": "195fb0da046d55bb042e91543484cf1da68b02bb7afbfe031f229e45ac84b3f2"
+    },
+    {
+      "group": "org.jetbrains.kotlin",
+      "artifact": "kotlin-stdlib",
+      "version": "1.9.10",
+      "sha256": "55e989c512b80907799f854309f3bc7782c5b3d13932442d0379d5c472711504"
+    },
+    {
+      "group": "org.jetbrains.kotlin",
+      "artifact": "kotlin-stdlib-common",
+      "version": "1.9.10",
+      "sha256": "cde3341ba18a2ba262b0b7cf6c55b20c90e8d434e42c9a13e6a3f770db965a88"
+    },
+    {
+      "group": "org.jetbrains.kotlin",
+      "artifact": "kotlin-stdlib-jdk7",
+      "version": "1.9.10",
+      "sha256": "ac6361bf9ad1ed382c2103d9712c47cdec166232b4903ed596e8876b0681c9b7"
+    },
+    {
+      "group": "org.jetbrains.kotlin",
+      "artifact": "kotlin-stdlib-jdk8",
+      "version": "1.9.10",
+      "sha256": "a4c74d94d64ce1abe53760fe0389dd941f6fc558d0dab35e47c085a11ec80f28"
+    },
+    {
+      "group": "org.jspecify",
+      "artifact": "jspecify",
+      "version": "1.0.0",
+      "sha256": "1fad6e6be7557781e4d33729d49ae1cdc8fdda6fe477bb0cc68ce351eafdfbab"
+    },
+    {
+      "group": "org.junit.jupiter",
+      "artifact": "junit-jupiter",
+      "version": "6.0.3",
+      "sha256": "784b65815f479a0c99a9d3a573b142e2a525efb6025d97f751b19e72f90aeda3"
+    },
+    {
+      "group": "org.junit.jupiter",
+      "artifact": "junit-jupiter-api",
+      "version": "6.0.3",
+      "sha256": "d655d7e6f0c7ae07f10a2f3bbaaebb6d30e9b26204a068ad9e9b3950aa28792c"
+    },
+    {
+      "group": "org.junit.jupiter",
+      "artifact": "junit-jupiter-engine",
+      "version": "6.0.3",
+      "sha256": "1e2fab61ad27ea08fc7c70dd9677cf8c6d1ae5434d42dcfdd633b12c7e7c04d0"
+    },
+    {
+      "group": "org.junit.jupiter",
+      "artifact": "junit-jupiter-params",
+      "version": "6.0.3",
+      "sha256": "cf2947e2302b9f8c8a059259a277881c1cadae8fbc2514c16a925cfeb7beb2e5"
+    },
+    {
+      "group": "org.junit.platform",
+      "artifact": "junit-platform-commons",
+      "version": "6.0.3",
+      "sha256": "39f262d09c3d52719fe0b77f080e90a3695e285d779a41b232e17963ae5da200"
+    },
+    {
+      "group": "org.junit.platform",
+      "artifact": "junit-platform-engine",
+      "version": "6.0.3",
+      "sha256": "491e9e4f745f161b8a8e4186a1a7c6a450ea12c70930c9aedae427215301d947"
+    },
+    {
+      "group": "org.junit.platform",
+      "artifact": "junit-platform-launcher",
+      "version": "6.0.3",
+      "sha256": "315608372e4dc44bca0ccb3ae8a07ecc206b3367033fa05748a03ccd563f1301"
+    },
+    {
+      "group": "org.mockito",
+      "artifact": "mockito-core",
+      "version": "5.23.0",
+      "sha256": "ae295bebd5d11fab97ab297815dc7617188b86003cbce3dfd5c0d5c3a6cc4a0c"
+    },
+    {
+      "group": "org.mockito",
+      "artifact": "mockito-junit-jupiter",
+      "version": "5.23.0",
+      "sha256": "65938526fdc311bb3a1c0015eb1c8a0be81515aa998f22b9f4e92f1b668e4f63"
+    },
+    {
+      "group": "org.objenesis",
+      "artifact": "objenesis",
+      "version": "3.3",
+      "sha256": "02dfd0b0439a5591e35b708ed2f5474eb0948f53abf74637e959b8e4ef69bfeb"
+    },
+    {
+      "group": "org.opentest4j",
+      "artifact": "opentest4j",
+      "version": "1.3.0",
+      "sha256": "48e2df636cab6563ced64dcdff8abb2355627cb236ef0bf37598682ddf742f1b"
+    },
+    {
+      "group": "org.osgi",
+      "artifact": "org.osgi.annotation.bundle",
+      "version": "2.0.0",
+      "sha256": "b9c9546ec5be3ebc2e85ba4919150ad76d64594805282fc895133a47d264a7ae"
+    },
+    {
+      "group": "org.osgi",
+      "artifact": "org.osgi.annotation.versioning",
+      "version": "1.1.2",
+      "sha256": "f51f235e80df8ffbc30ef1b557b6ea38a696632d675404ec117e952978b8b863"
+    },
+    {
+      "group": "org.osgi",
+      "artifact": "org.osgi.resource",
+      "version": "1.0.0",
+      "sha256": "81fc50f1f1d38a4af28e131907d4afe213249aab05060484edca0e60c4af9b4a"
+    },
+    {
+      "group": "org.osgi",
+      "artifact": "org.osgi.service.serviceloader",
+      "version": "1.0.0",
+      "sha256": "8f876ce2a9aa4e95b1f1952950255103e2487425050a654f3285447ba601c154"
+    },
+    {
+      "group": "org.ow2.asm",
+      "artifact": "asm",
+      "version": "9.7.1",
+      "sha256": "8cadd43ac5eb6d09de05faecca38b917a040bb9139c7edeb4cc81c740b713281"
+    },
+    {
+      "group": "org.projectlombok",
+      "artifact": "lombok",
+      "version": "1.18.46",
+      "sha256": "01f7b1a015e33e2b62d5f5f37053306357ab1415fd181fcba7794f5d198c1126"
+    },
+    {
+      "group": "org.reactivestreams",
+      "artifact": "reactive-streams",
+      "version": "1.0.4",
+      "sha256": "f75ca597789b3dac58f61857b9ac2e1034a68fa672db35055a8fb4509e325f28"
+    },
+    {
+      "group": "org.rnorth.duct-tape",
+      "artifact": "duct-tape",
+      "version": "1.0.8",
+      "sha256": "31cef12ddec979d1f86d7cf708c41a17da523d05c685fd6642e9d0b2addb7240"
+    },
+    {
+      "group": "org.skyscreamer",
+      "artifact": "jsonassert",
+      "version": "1.5.3",
+      "sha256": "719095c07d4203961320da593441d8b3b643c18eb1d81aa98ea933bb7eb351ba"
+    },
+    {
+      "group": "org.slf4j",
+      "artifact": "jul-to-slf4j",
+      "version": "2.0.18",
+      "sha256": "cbb7d1aaaa9e871eb1a06594abd911bf97027152976edf1edc315be75239204e"
+    },
+    {
+      "group": "org.slf4j",
+      "artifact": "slf4j-api",
+      "version": "2.0.18",
+      "sha256": "44508fd1576500688c790b190acdd16fec4f8c79a3e0b900afd70503cf055f55"
+    },
+    {
+      "group": "org.springframework",
+      "artifact": "spring-aop",
+      "version": "7.0.8",
+      "sha256": "1178f039e087884174e2affc46e484f4a8bd7f2a4e011d33dd9137709f740f80"
+    },
+    {
+      "group": "org.springframework",
+      "artifact": "spring-aspects",
+      "version": "7.0.8",
+      "sha256": "f5e7eb54ff5b6355976977401852c0f0670312aa2f18c153d29ff02943883b06"
+    },
+    {
+      "group": "org.springframework",
+      "artifact": "spring-beans",
+      "version": "7.0.8",
+      "sha256": "6ec2e361a8872a71d8b1ff66f1bcb8cfa29fcc437931998919da7cecfb59b45b"
+    },
+    {
+      "group": "org.springframework",
+      "artifact": "spring-context",
+      "version": "7.0.8",
+      "sha256": "1eb7d552414ebac00e30ab3e809138d810785f6d2c4271db77cdf0181f308f19"
+    },
+    {
+      "group": "org.springframework",
+      "artifact": "spring-context-support",
+      "version": "7.0.8",
+      "sha256": "9ab80715682c47ad66a1a2c0e9ab2be9ec3d828276f281597f12c5208147b92e"
+    },
+    {
+      "group": "org.springframework",
+      "artifact": "spring-core",
+      "version": "7.0.8",
+      "sha256": "726ba2a5130833644bdf267a55ff26e1f52e8dcc9aa1ffa06904ca9c14619f25"
+    },
+    {
+      "group": "org.springframework",
+      "artifact": "spring-expression",
+      "version": "7.0.8",
+      "sha256": "3c97c38ab59c77ee886e08ccf8096f6bb58a1245f68dfed7a40e93f41c435f9a"
+    },
+    {
+      "group": "org.springframework",
+      "artifact": "spring-jdbc",
+      "version": "7.0.8",
+      "sha256": "7d6bbf130ed919d5f4f01ec0ea771ab59ac3936ab29f50fd3a705c0119871e32"
+    },
+    {
+      "group": "org.springframework",
+      "artifact": "spring-messaging",
+      "version": "7.0.8",
+      "sha256": "0f96694ebb88fed6bf4aef608010c23ee922a476dd71e0fab76ca9ed0eaa70b0"
+    },
+    {
+      "group": "org.springframework",
+      "artifact": "spring-orm",
+      "version": "7.0.8",
+      "sha256": "3ff1ad6ab4ebcc7dc9ef02f40aa60790bddead11b0e0fc7f75cb20f41f7d291e"
+    },
+    {
+      "group": "org.springframework",
+      "artifact": "spring-oxm",
+      "version": "7.0.8",
+      "sha256": "67f91ffb41a94cf0e443f02ee6f740d52e10a84cabae218cdb0de65f87a82172"
+    },
+    {
+      "group": "org.springframework",
+      "artifact": "spring-test",
+      "version": "7.0.8",
+      "sha256": "6ffb7796075a204915edc4bb9e54dc420183cecb520d753004f660f153763c8e"
+    },
+    {
+      "group": "org.springframework",
+      "artifact": "spring-tx",
+      "version": "7.0.8",
+      "sha256": "57e8fdb6de949e7ec2617683fec03af0253bdbdf4bf3d2651a926a94413df283"
+    },
+    {
+      "group": "org.springframework",
+      "artifact": "spring-web",
+      "version": "7.0.8",
+      "sha256": "4d4ed7ecb0453d25d735ea27d025ea36b003c3d29cb7d006bedd6d5188a2f5c0"
+    },
+    {
+      "group": "org.springframework",
+      "artifact": "spring-webmvc",
+      "version": "7.0.8",
+      "sha256": "48f7e1e2d0d46e98ed3fa30d5a64cb1f7ed2aa339a82edcd87289ed8ff216f04"
+    },
+    {
+      "group": "org.springframework",
+      "artifact": "spring-websocket",
+      "version": "7.0.8",
+      "sha256": "5127c9bd1d565b9081b07743496c892424a19e2f42a81ec1480cbc98fb3dd2a5"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot",
+      "version": "4.1.0",
+      "sha256": "b23951a3a7f867e38db4729b8594e1b72374516f386b1dd9cf4d5317d6d3f91f"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-actuator",
+      "version": "4.1.0",
+      "sha256": "10279d87ab47a9a41cb69c56fc69494a54a3b84f25c853141ed234d4832e85b4"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-actuator-autoconfigure",
+      "version": "4.1.0",
+      "sha256": "1124c22bc848e5ed557fe4543698056ef7090f134f2ccbcafb3d6c18a5613b13"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-autoconfigure",
+      "version": "4.1.0",
+      "sha256": "0fcaa3050ba835ca6b3879f81cd48dc590a6262f53bbf10d2a95c70bf7c048ac"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-buildpack-platform",
+      "version": "4.1.0",
+      "sha256": "9c0d0203baa368aacf5449932a3a414f3991cd2eb7be6638e33c4fe9484a7f60"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-data-commons",
+      "version": "4.1.0",
+      "sha256": "44613292a91c231d81d39d05b10550b9988e7dcaf3b931b700e86fb0ac029937"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-data-jpa",
+      "version": "4.1.0",
+      "sha256": "5c9fe8ee830a45bba829e7bd150aa0633c18d50870561d85299af1e8418daac4"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-data-jpa-test",
+      "version": "4.1.0",
+      "sha256": "5d478eb3b9eda90e1a62f3d2d477e3bdacf507c0354e93797a4cce1b1554d4b1"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-data-redis",
+      "version": "4.1.0",
+      "sha256": "a3cee050807b8e0b437678ab40319930dfcffc7eb1da9bb57bf8e10900967e24"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-gradle-plugin",
+      "version": "4.1.0",
+      "sha256": "861fd80bfb542856affc3987899dd4e37f1b2227d813b579ae282305e8905aac"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-health",
+      "version": "4.1.0",
+      "sha256": "cbd92b42254fe264a5d4556538049139aabbfdc367f5d06fb5b4cf97aa70fc18"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-hibernate",
+      "version": "4.1.0",
+      "sha256": "fcdcf4b490a8fa0e6ce466334bc8ae752a80e1ff1c9eb58a101e2fff878a2863"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-http-converter",
+      "version": "4.1.0",
+      "sha256": "f82c8913ea17a60630a5d26fa006cf79f28c7d920dbbef8760f5bc7053706fea"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-jackson",
+      "version": "4.1.0",
+      "sha256": "10b6e63a40b257168854093f413eaab8b8a9afb7e989fcc7f6732b42c3f173d1"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-jdbc",
+      "version": "4.1.0",
+      "sha256": "3b5aab97e72d8a15a40546c31365ed2090cf25451e18762add8ed22cbb4ead43"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-jdbc-test",
+      "version": "4.1.0",
+      "sha256": "36340eda0fe85ca556eca117608868f19374adc8fb6cf2c0fccdbc9ec6976e62"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-jpa",
+      "version": "4.1.0",
+      "sha256": "cd61301aebef59f3d2874ebd51862ed52d342d8c162874791475486232316d95"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-jpa-test",
+      "version": "4.1.0",
+      "sha256": "4c70f6644fc3361ec314098b324c786e2653cf7a1adae3229ea6a68a0ac4d84f"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-loader-tools",
+      "version": "4.1.0",
+      "sha256": "5bdd6efb13eb216e4e099f83d165b09ffc3338e3f21a8135c91dd8ca8940a17a"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-micrometer-metrics",
+      "version": "4.1.0",
+      "sha256": "2030f79dbc59c9d84f1f4d6d2a423b46a8ba5cc277cbda75ac54a436b3ea96fb"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-micrometer-observation",
+      "version": "4.1.0",
+      "sha256": "1f4a7a9755b38470157316dcec8a9f19b1b89864c5f742149b8db0c517f41853"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-netty",
+      "version": "4.1.0",
+      "sha256": "397e145402d1c556b1ac2ea154218ba88a83153adac9a7e5a4534dc6cc7d780c"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-persistence",
+      "version": "4.1.0",
+      "sha256": "d9d926224c738bd6152718c078134e3aea1057db4d6a452c37ad120893e0e4d6"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-resttestclient",
+      "version": "4.1.0",
+      "sha256": "743bb2e14cadafa395716d55318e509366d64ff4e08192f0ce33fe1a31a544dc"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-security",
+      "version": "4.1.0",
+      "sha256": "5e30a3ea1d62c5ef2af5a8bcf31237583f216f40dbb0b76ec2eda72981ea2bac"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-security-oauth2-client",
+      "version": "4.1.0",
+      "sha256": "cdf7e36a52b80b0b139f82e05ea9db0e58c8711c207b25fb85dcc48bd891fae2"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-servlet",
+      "version": "4.1.0",
+      "sha256": "5f694a7c6c357a87032bc92db0e7e0e03b64010f77892e5992c86b10f568a5ae"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-sql",
+      "version": "4.1.0",
+      "sha256": "2826a5380675337f4c5b3e90db02279e68a2c9a7eb2b2ac312828c05fb827a9a"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-starter",
+      "version": "4.1.0",
+      "sha256": "40352b3fc0834d5830f66d40100fc8afa8ac73e24a134c7779bd42b72f2d6506"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-starter-actuator",
+      "version": "4.1.0",
+      "sha256": "f6f6c4166430953515336ecf3b25ea467e24c4e5705cbcc8cefa273a4bd6bde8"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-starter-data-jpa",
+      "version": "4.1.0",
+      "sha256": "9fe4c797d98e10c3761c1ff6bc14fa5ca68bc0e4b9941a951f39b99502f57d56"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-starter-data-jpa-test",
+      "version": "4.1.0",
+      "sha256": "4b0008685a7ca7afd15c7e909fa9302085cef49b1025d08e63f69797e89c0d5f"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-starter-data-redis",
+      "version": "4.1.0",
+      "sha256": "85d475bcc240f0c8e2a142b0278d6063d11e64522823abe34d92a8c4dfb50c75"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-starter-jackson",
+      "version": "4.1.0",
+      "sha256": "4214c534cca5c7c7e1cf92db90f178a3dffdede503fb68ac3c0dd905f331431f"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-starter-jackson-test",
+      "version": "4.1.0",
+      "sha256": "157be9d095fd66b18138d0decfc027c4b1a22be4eb4cdeaf9bc462b3ddc18f49"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-starter-jdbc",
+      "version": "4.1.0",
+      "sha256": "ce3e3dfdde267f11d21960715967b59713575cab8e5e8b3b00fba6a3bb022c99"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-starter-jdbc-test",
+      "version": "4.1.0",
+      "sha256": "dbc5e4efe4dbcd1b981e8929a77732aea45f6493b1bd8889e8a0902b3125bf2b"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-starter-logging",
+      "version": "4.1.0",
+      "sha256": "73a6a42d2b6a589bd722aa107800829d0b20b731d94135f53c4b744db8beafbf"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-starter-micrometer-metrics",
+      "version": "4.1.0",
+      "sha256": "ad4a34ba880e6a8c811e90c1c034b937b8a78030eae60ec5b43826c42590c802"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-starter-oauth2-client",
+      "version": "4.1.0",
+      "sha256": "bb4c0a7b44c1dfe4170f1122823cb37fc3c6e3975e5573d63712cb68b8a6c2cd"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-starter-security",
+      "version": "4.1.0",
+      "sha256": "5370ad6bd847e85675ee81a2da98f5fabcfc8649197b0a873417a051aa435c41"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-starter-test",
+      "version": "4.1.0",
+      "sha256": "03ceed4690ac787c2aa22e72c767c395c446d83f2e581282cf2e6a3a11cbc2d8"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-starter-tomcat",
+      "version": "4.1.0",
+      "sha256": "3e8cbd141ee6f4f2acfaf6320f1951307816f086de426d08eac19ef4a57d7e90"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-starter-tomcat-runtime",
+      "version": "4.1.0",
+      "sha256": "135fa0b7a4232c64b975f348cab39e2259d36a18e14768f5f213147a4febf68d"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-starter-validation",
+      "version": "4.1.0",
+      "sha256": "f4a15a63712f4a097347cae20dca5456be4a7d87a6f2791be3815ecf58638837"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-starter-validation-test",
+      "version": "4.1.0",
+      "sha256": "e73002b648c62bedb4a0ac9e72221cdb1f01823f73eb4c0a958c1f73e1bb687a"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-starter-webmvc",
+      "version": "4.1.0",
+      "sha256": "49686a49412712d7440edd7e4f7fe7f6e75b63d68a11a275a50b5eca902dfaec"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-starter-webmvc-test",
+      "version": "4.1.0",
+      "sha256": "f884a2769b20f2746c0462157961d3d4fdc5c04d6890cfa91186cd7b6aff342b"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-starter-websocket",
+      "version": "4.1.0",
+      "sha256": "963e170d4eed6dd0a252a57a8baa184aab17016f2a85f5aa07745e366b758570"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-test",
+      "version": "4.1.0",
+      "sha256": "3421dbe658d32e9e0165c118b031e4585f8c55710b1b6b9368453c6d8daaeb58"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-test-autoconfigure",
+      "version": "4.1.0",
+      "sha256": "ceebd04f58fd51f037ade92cac4ac14af36ffa5eb2f273c17f886041fe32d0cc"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-testcontainers",
+      "version": "4.1.0",
+      "sha256": "be31b0c954c90285358cf6fa6ad13cf130752e131c6f7cae099c183d08f2982b"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-tomcat",
+      "version": "4.1.0",
+      "sha256": "011e662eb6f9f4a80c5dacf914cfca8a25a33fcd753736ec453dcf701337dd24"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-transaction",
+      "version": "4.1.0",
+      "sha256": "5402dfeef5d6633b485d6ce8d1cfb2116c7a55e70f8f5dbd31b69ca43e006f13"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-validation",
+      "version": "4.1.0",
+      "sha256": "38e3409dc8050e14afcfe14b7bb09f10d1077c7fbd33150ba2698d53dd79b4cc"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-web-server",
+      "version": "4.1.0",
+      "sha256": "a8541ccbd29f5a8db7e6092fa83463aa4d1c002fac07b8b5babe118ad6c4a3d3"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-webmvc",
+      "version": "4.1.0",
+      "sha256": "ab21735a550cbfefaa4ad6ffbb1a891592580ef05ad729cd2025bc0245862b55"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-webmvc-test",
+      "version": "4.1.0",
+      "sha256": "71748074bb59d2420df911c4029e8cb8400ccad8a5050f12e7beea61a9cd4d98"
+    },
+    {
+      "group": "org.springframework.boot",
+      "artifact": "spring-boot-websocket",
+      "version": "4.1.0",
+      "sha256": "42030c67492fbafe2215a0b241ddd6398bbc1ebb1320f3aad628653ca42992e2"
+    },
+    {
+      "group": "org.springframework.data",
+      "artifact": "spring-data-commons",
+      "version": "4.1.0",
+      "sha256": "c9e41d45b30aacc0ce50c4426f0650a3544c066ab5d6d0304840e6f878388c5c"
+    },
+    {
+      "group": "org.springframework.data",
+      "artifact": "spring-data-jpa",
+      "version": "4.1.0",
+      "sha256": "60b72b0513faecb3ef51f53f35d74de68b193af06dc7c1c66b54e265762bad66"
+    },
+    {
+      "group": "org.springframework.data",
+      "artifact": "spring-data-keyvalue",
+      "version": "4.1.0",
+      "sha256": "1cab6685ee820428a9fb48eab4a5cb48ddcab1dfdb2467b9afb3c47f5455d19b"
+    },
+    {
+      "group": "org.springframework.data",
+      "artifact": "spring-data-redis",
+      "version": "4.1.0",
+      "sha256": "c9f7c6d38c98e4240250c0c3969758b26763c4e0e87726915a71855062ae6cb2"
+    },
+    {
+      "group": "org.springframework.security",
+      "artifact": "spring-security-config",
+      "version": "7.1.0",
+      "sha256": "3234035bb5ccd45a9367ce526723d6b8da501c5c3f725b54a98354f922c2e978"
+    },
+    {
+      "group": "org.springframework.security",
+      "artifact": "spring-security-core",
+      "version": "7.1.0",
+      "sha256": "f8cecce9e65db9fe9ea42ca92b04d6e4e4320ff9d492aa60b753716ea397262c"
+    },
+    {
+      "group": "org.springframework.security",
+      "artifact": "spring-security-crypto",
+      "version": "7.1.0",
+      "sha256": "6f6957548a28451712e53b94a3e77057735b2fcec04c99ca6dd555b574453a98"
+    },
+    {
+      "group": "org.springframework.security",
+      "artifact": "spring-security-oauth2-client",
+      "version": "7.1.0",
+      "sha256": "6a90451711b3623f7f705ae5d555131b18be1e8f7299d7fc423fcf2e7b87128b"
+    },
+    {
+      "group": "org.springframework.security",
+      "artifact": "spring-security-oauth2-core",
+      "version": "7.1.0",
+      "sha256": "68c6bfbace2a429cdd277ce848f8a1a6ea8e33bb386fa2ba19636821457c376f"
+    },
+    {
+      "group": "org.springframework.security",
+      "artifact": "spring-security-oauth2-jose",
+      "version": "7.1.0",
+      "sha256": "a1620a4424e40035dc33d3a53d98a9e978a96d98334a43aaef0bbd60268d0f8c"
+    },
+    {
+      "group": "org.springframework.security",
+      "artifact": "spring-security-test",
+      "version": "7.1.0",
+      "sha256": "775ef4e1771d3e076591ae909731c2372f1e5876847b42b40f821656e66fd30a"
+    },
+    {
+      "group": "org.springframework.security",
+      "artifact": "spring-security-web",
+      "version": "7.1.0",
+      "sha256": "1deee612104ce85ec815076b80578cd8e82c07067e122068f09fbfef860b3cb1"
+    },
+    {
+      "group": "org.testcontainers",
+      "artifact": "testcontainers",
+      "version": "2.0.5",
+      "sha256": "0466f481343d5f350a91274cd7bf984308cbaf90d706247fd1cf4b1a8010c2e1"
+    },
+    {
+      "group": "org.testcontainers",
+      "artifact": "testcontainers-database-commons",
+      "version": "2.0.5",
+      "sha256": "0ebbc62bdcfb315cb840a63fbaa148b455927666d9034b5e5c00009d84c755b0"
+    },
+    {
+      "group": "org.testcontainers",
+      "artifact": "testcontainers-jdbc",
+      "version": "2.0.5",
+      "sha256": "0f7fe603a32692c33739cf99d638206f9060ca47615bf0141ca2eb32d33d764a"
+    },
+    {
+      "group": "org.testcontainers",
+      "artifact": "testcontainers-junit-jupiter",
+      "version": "2.0.5",
+      "sha256": "d66eb7f257a85833a8cc973e3814d740967d40a7db1a0de0040653c6ed236748"
+    },
+    {
+      "group": "org.testcontainers",
+      "artifact": "testcontainers-mysql",
+      "version": "2.0.5",
+      "sha256": "1fafe80953b9b5ef947035b3ee6ae387466f54c401b6f84c6827a1126746d9b5"
+    },
+    {
+      "group": "org.tomlj",
+      "artifact": "tomlj",
+      "version": "1.0.0",
+      "sha256": "32697c7567b2921c473678a820b13fc64700aa87bb14576eeb48d0ed5847cfd4"
+    },
+    {
+      "group": "org.tukaani",
+      "artifact": "xz",
+      "version": "1.9",
+      "sha256": "211b306cfc44f8f96df3a0a3ddaf75ba8c5289eed77d60d72f889bb855f535e5"
+    },
+    {
+      "group": "org.xmlunit",
+      "artifact": "xmlunit-core",
+      "version": "2.11.0",
+      "sha256": "50970e6069c21182689eb44ae9f8193970e080b6f37fc13f22aa4201cca2dfe4"
+    },
+    {
+      "group": "org.yaml",
+      "artifact": "snakeyaml",
+      "version": "2.6",
+      "sha256": "c8f7a98e7394adda02f6317249710e4d1b4c7a25aa8c7eace0c2eea52eb8bf85"
+    },
+    {
+      "group": "redis.clients.authentication",
+      "artifact": "redis-authx-core",
+      "version": "0.1.1-beta2",
+      "sha256": "cc56edb08b3df8562cddac108dca61907d21cc4ad04de05e9f5d1b01058390af"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "annotations",
+      "version": "2.47.3",
+      "sha256": "c27054f4f4107c76b852a00ae1dd8ff0a314a4e36710eb37f4bf088899338c45"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "apache5-client",
+      "version": "2.47.3",
+      "sha256": "ae091cdb267ec3d92e28cb5a60db925bef8cad1a1bb57022d41a07a446c27910"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "arns",
+      "version": "2.47.3",
+      "sha256": "4c3dd45687d0b8d45c6ec59e7971486c9a702f28a4684e82c24a57f17743b168"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "auth",
+      "version": "2.47.3",
+      "sha256": "9985516d33da4859d32b8f654f8f035da9eacfc24ea137b80d364941d0c812f3"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "aws-core",
+      "version": "2.47.3",
+      "sha256": "91c3dd271bf3efecca194b2c6e6cc1baae949941e7bee60fb35aece0f231e1b1"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "aws-query-protocol",
+      "version": "2.47.3",
+      "sha256": "f2252739f1eb3f8eb7cd3d69e9277e88b7aa21757174e9c44d0205c54c624f3c"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "aws-xml-protocol",
+      "version": "2.47.3",
+      "sha256": "4bc6a9aeece1caa023e6850fae54098bf9a0ef450e188bb2408742c49f72a0c0"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "checksums",
+      "version": "2.47.3",
+      "sha256": "5ba5f7b9a3d15334b04cea4ccce9682e94e6ee5346db70521812b651573ca00d"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "checksums-spi",
+      "version": "2.47.3",
+      "sha256": "9a89172cd065a30b5c71d7bbd9a0e4503040cb443ead25d0c1ea0f7ef9a4b689"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "crt-core",
+      "version": "2.47.3",
+      "sha256": "0423ee200b1a42b3dc7919d754c949641bd65da472548bf4794739eac4f763f5"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "endpoints-spi",
+      "version": "2.47.3",
+      "sha256": "14fd42ae475fd2a505648c587df03f8aa7a46d48a1cd08585420c60bf9caa69e"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "http-auth",
+      "version": "2.47.3",
+      "sha256": "2679a63e7543ae0d50b38fb4f8851f6b6e0055433615f79ee65e733b67a5758b"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "http-auth-aws",
+      "version": "2.47.3",
+      "sha256": "532b693334d2d87d73deba28e1cbeca0e14df1ad984f2be4df3b50a7b011c805"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "http-auth-aws-eventstream",
+      "version": "2.47.3",
+      "sha256": "9f572e260e628773a9b3cac52de649f82a9d997424427354df24958930f3a9c9"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "http-auth-spi",
+      "version": "2.47.3",
+      "sha256": "cbf6fea5fe07ecb14893484bd48ebb53bf251ebbe6403a2030eb097be3f6dff4"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "http-client-spi",
+      "version": "2.47.3",
+      "sha256": "cb99831b0ba08ee23b9d5e1003abb14b785f9e0dbadd48c00a52e918af0505fa"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "identity-spi",
+      "version": "2.47.3",
+      "sha256": "30faccad4d8503e9a92eb200e918a17153c33ccb72ae19c93ae1f01ac635ba32"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "json-utils",
+      "version": "2.47.3",
+      "sha256": "84395fd2265e0714e481400405c73632e7408ba034de80a06d672b6a670386e9"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "metrics-spi",
+      "version": "2.47.3",
+      "sha256": "10ad1c6afa8037e5f702a1029128ec777be10748ea8fb58935b05dab4189980e"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "netty-nio-client",
+      "version": "2.47.3",
+      "sha256": "a150d1ae9663f826f09e66d34df60d75a25b692ce1f63401c6bb3a616776a085"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "profiles",
+      "version": "2.47.3",
+      "sha256": "baedaaaaac97c967240837db68801ddac0e46520f74efe272d4baf70c8a96a3e"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "protocol-core",
+      "version": "2.47.3",
+      "sha256": "65ba256307d4db3e0e76a555d35c2ae96fd2a9ac2351e02c5c80fcead5a8b03b"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "regions",
+      "version": "2.47.3",
+      "sha256": "2d9f94e0a79c08e9b9bfa9a1577866a63de1a4b269372df290682b625c3e5ef2"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "retries",
+      "version": "2.47.3",
+      "sha256": "3e112e78d4c23d7fc24fbec9ccc001f198b2cbc975b5ba48fc496d13e1b98df1"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "retries-spi",
+      "version": "2.47.3",
+      "sha256": "b052d882e991565bcf2b735f0db2edd40a682853bd802b3d4f0bc12b479b9e7a"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "s3",
+      "version": "2.47.3",
+      "sha256": "f70766d26c68baa8351a2a9d904f320e9bba5c05ab74858852a7f469c4da01c1"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "sdk-core",
+      "version": "2.47.3",
+      "sha256": "f486bb1ad982f5fa7549792b136529d44030afae10c7f08051b936509cf8c9a3"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "third-party-jackson-core",
+      "version": "2.47.3",
+      "sha256": "e128b64219bcf697c2d9593a1ddc10a62eccd7d18f531e411f960833c6babe35"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "utils",
+      "version": "2.47.3",
+      "sha256": "98bb2470236812c1e6ad0a0513d6a49f4e8b444394adc0dbf773b7629586d3a1"
+    },
+    {
+      "group": "software.amazon.awssdk",
+      "artifact": "utils-lite",
+      "version": "2.47.3",
+      "sha256": "d806b191ef77001d1c5f46f637e050384893348ae511d9b62365131d1eb2d2e4"
+    },
+    {
+      "group": "software.amazon.eventstream",
+      "artifact": "eventstream",
+      "version": "1.0.1",
+      "sha256": "0c37d8e696117f02c302191b8110b0d0eb20fa412fce34c3a269ec73c16ce822"
+    },
+    {
+      "group": "tools.jackson.core",
+      "artifact": "jackson-core",
+      "version": "3.1.4",
+      "sha256": "3bda1cd6eff0a8d47bdfcaeae7c2bd5311d6c8ed494ef5f3e51029bb44aa9bdf"
+    },
+    {
+      "group": "tools.jackson.core",
+      "artifact": "jackson-databind",
+      "version": "3.1.4",
+      "sha256": "14034bfdf392b6ebec1b4bb6c1de29d604f0aa97251259a19d5f19af8719bb20"
+    }
+  ],
+  "sourceSha256": {
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/SsasukaeApplication.java": "fe114d5b022b59c0e57b74905c4b1ec13f6a4e107871551c57814e6a74962374",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/config/CardSchedulerConfig.java": "2f2103308bfb042b0fab16b2d8a61c4826dff74bb5de9625679b6c43ff65f7d3",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/config/CorsProperties.java": "8c557b35634b79e6c41eba2cedcf2064d20f4fd80433af4567025e312c9cc38f",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/config/JpaAuditingConfig.java": "b228a67c81cc9acc571d8f0bfae46969ac0de7d22162c5924ed26600c351db45",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/config/OpenViduConfig.java": "3cd3a6daf93592ad4a4c7a208c8d43f9f59eb18540b87f90b3599417d15c0bc1",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/config/PerformanceRecoveryConfig.java": "cae70381d6b60da30fc366d66659cfdfcb37e222f85849358b054b6e8a370c63",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/config/S3Config.java": "09093274d95142351cb1ad8e947c641eb9f7d246e4233ff99fa310af4c2ca3e0",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/config/SecurityConfig.java": "ba8c8e4bb7d35eb956f287fe9a932360e8482e588571955439a601784601bd08",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/config/WebSocketHeartbeatConfig.java": "d74fb49488171391c7f6d5183f7d57ace5d8e2ecf8dc584249a26f16266fb406",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/config/WebSocketMessageBrokerConfig.java": "97cbaa59ae94d7f135d5fd4eb21f72ec4a776ddb8bc44c6f51174ee7c77b2818",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/admin/controller/AdminSongController.java": "93f3c921bf0b9fa5fab63fa21905f1362a1dedebde242730b2d436c85d41b11f",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/admin/dto/AdminUploadTicketResponse.java": "9f0e9d7a66288f1b23c9cddd2d85af58a582328796018c255edfedc27b10dcce",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/auth/controller/AuthController.java": "51f67f7d53cebd30c21193725c51e6ed3c6312523ef64ef76e831b582ed940f4",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/auth/dto/AuthTokenResponse.java": "080af65489875582497788a1f60345ad6ef0445ef9a81a4bf83a46eac1a41f3c",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/auth/dto/OAuthLoginResult.java": "ad97c5c2fe4e2e037032e7670875c09b3b189a84ce9cb73ba6bcec31d4285796",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/auth/dto/OAuthSignupRequest.java": "c1553929b606714ba680d7f95ac5529bbaf380d09d64b62f947fd2d2805a9948",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/auth/dto/SignupTokenClaims.java": "6ad203f40149506a36e57bba649f5d1c4fc83d2f503a77292c6a7df8c9e7880a",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/auth/dto/TokenReissueResponse.java": "ee4d3a1c3276b96680678c566bd10fdebf6ca6491dca642ea600a584a2cbb99c",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/auth/service/AuthService.java": "e8326cb26339108f14f95654f7ce76756a1bf1086005caa15402e8d6ef7c8671",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/auth/test/controller/LocalTestAuthController.java": "1592d8a01ed7b7e0bf20dab70a83b6a970fc0fe7eb4e37546c31d8fec739dfc5",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/auth/test/dto/LocalTestLoginRequest.java": "4e0abc95bf1f9a33237d2611e000d982f664d9fd838168d475473232aa3b247d",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/auth/test/dto/LocalTestSignupRequest.java": "da9a9cfa725f2906255790c2d17a4e58afd8318365c371420a5c466dce64555e",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/auth/test/service/LocalTestAuthService.java": "b8a9c88ba76d03890cb52445453b0e73f82a803e6120569b482868e50b679f01",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/card/entity/Card.java": "edeea418dc3671137471fd3fc425e87ab0e29bb98cb06d89617ae11876d7fb13",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/card/redis/CardAssignmentSnapshot.java": "45d07e0a79798a609f48c87008d90e2e9a0fb5dcfb828db9346ed953a2c144ce",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/card/redis/CardAssignmentStatus.java": "c535347c5321cdd3a8390db05a3e683c72bfd7330c8643af152164eba94ba72e",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/card/redis/CardStateStore.java": "8217286001e1cac06f729e21d9888ba2579baceb20f671c29571773cf784d048",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/card/redis/RedisCardStateStore.java": "dd32fde14a61c4e718e2f60fc17ac4afbe352e73c1df4fad37f5ef2c5c581f34",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/card/redis/RoomCardSnapshot.java": "8150ed549a37033cb7e90bf022053254785bee4c392c748cbf1a95faa3315930",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/card/redis/RoomCardStatus.java": "7acd1d91d7c44d2ee2a16266ca2e6caf86bd10f94684ba00c9b38fe3a65afd1f",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/card/repository/CardRepository.java": "8f34038f84d78600ec1f0ca1fffe483e2a503a5505ba00762ced001df0f6dd8a",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/card/service/CardService.java": "04ea118a2a31a092b1326a78a65eae387a89dae9a1ea4b0fefc0e34d6059d7b4",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/card/type/CardTier.java": "8634197f2913aec3eeddeaacc49c84d071671887e526142631114c1b01eb6984",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/card/websocket/CardWebSocketController.java": "f5348840cc6ae8c709ad81b4fdb978eb31dbe6631359733b8ab87869183d0264",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/card/websocket/CardWebSocketEventPublisher.java": "5ffee156b7968236b62aec4829a9e445e7c8ab439458cf21039d889f772a647d",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/card/websocket/CardWebSocketEventType.java": "13bb33df0a06b4927e16e73b2ad991aa36e0bfd5c685b53dd7d782318abe145d",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/card/websocket/payload/CardActivationCancelledPayload.java": "754d997b545752bc72dcfbaa3a9ea5ee4c1d420f94db58df5182879004e3fda3",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/card/websocket/payload/CardActivationScheduledPayload.java": "41725c49af5220b7f3d4b514ffe82229856d99d2dfbc3b1466d82a8b486d3859",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/card/websocket/payload/CardAssignedPayload.java": "37a1972b82568f2f58c9b24d09ecd379bfbec19a7f4dcf06d4109d5ceb4bc099",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/card/websocket/payload/CardEffectEndedPayload.java": "2b9886d7298ceeee7bb409165b9f30ebbbc54cb7f948d61609bceca391dc761c",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/card/websocket/payload/CardEffectStartedPayload.java": "aaa9a3cad6c6596545a0f639e29c05cc935dab66bb02f032913869f79a3eb197",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/card/websocket/type/CardEffectEndReason.java": "36d7723ddf654e26aeb8f65f93c0e1e00bc4e80758ec648bade079c722fced5e",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/card/websocket/type/CardEffectTargetType.java": "117b24afefce44647ae2bf1dddef8dbb279c662293d1befebc1241547a152a06",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/card/websocket/type/CardEffectType.java": "3b3e244e9ea19c92ed83a1864585fbfcec5c3c8fff9ea93847cc3a92a8b02967",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/favorite/controller/FavoriteController.java": "45192c2f806a9fca32f4a1c2e6c16720b1c843c231b5461397915439f5916270",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/favorite/dto/FavoriteResponseDTO.java": "0dd3f28a970312dfd80e93e6404bbf88e818eb4f58b9ba76cd2ecc93ee30834e",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/favorite/entity/Favorite.java": "db60b4af67e1ff721009ef75618a1a7232af30789f9ff51e55533ba0975f6eae",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/favorite/repository/FavoriteRepository.java": "19f94bfebc9e56c27774b1c898add601fd39e85b3657f13b2a034238544967c0",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/favorite/service/FavoriteService.java": "f30a811a253cf067932b66f3af22286291b2911172a0ed27dcf28c325a4b38a0",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/feedback/controller/FeedbackController.java": "7c77110b006a9fd764e0ec6932c4c0e1fd0e0d408a847a3ee556e4fb2fc7f4c5",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/feedback/dto/FeedbackResponseDTO.java": "2a50a499525ed5ee2f265f1df1e7fe9803662e8e554ae533ca582003d4fe5558",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/feedback/service/FeedbackService.java": "bf2e8a3122fadd8761aa0e3292060e98263e4346410acbc8856cbf18854fb3b2",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/feedback/websocket/FeedbackWebSocketEventType.java": "1a40ff484dfd80e2f58b36eb667f0d66536921a9d6ae163a2859a79ae6328ae9",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/feedback/websocket/payload/ScoringProgressUpdatedPayload.java": "32700b9a935414539739c8053f104f0060bcb1938df72e94dccb176dddf626d2",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/lowlatency/config/LowLatencyProperties.java": "9dad8439661f782241111e2afde2105f07dce392681cade05e068759d965fe51",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/lowlatency/controller/LowLatencyAppController.java": "7d3cc8ec252e23f2e0f530f8f284f8186bd8439891121fc15ad3b9fcc2120c0d",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/lowlatency/controller/LowLatencyAuthController.java": "7f025bb6e1ad3476bf592e574adc41457721a32d17beb472dda7e0834fd7b7f1",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/lowlatency/dto/LowLatencyAppSessionResponse.java": "26745760fa41134ac13565056fffa6505e35a997b1b0af4306ad02fd5b7c9ed9",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/lowlatency/dto/LowLatencyTokenRefreshRequest.java": "55acb6a0e697275f9ae80231205964f2a418b8a651452e01bd533e5d09a9d414",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/lowlatency/dto/LowLatencyTokenRefreshResponse.java": "e75d457edf787df9427e0a123e0d5bff93f8d106051ad252b48f1cc72cca573c",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/lowlatency/service/LowLatencyAppService.java": "1c4b66b50177bfe216ee50d19605984e12cf8f1b7821fe1dc3e832627f3dab4e",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/lowlatency/websocket/LowLatencyPresenceListener.java": "9f1a417449a465f28ae7680ea6e784e200a23556080844b00c46251c26e4a9e6",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/controller/PerformanceController.java": "85ae6c354d7892691af2b3947953ed7bd6078e4af9abf45539c6609379f1bd73",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/dto/PerformanceResponseDTO.java": "1722034358c9f89b0dbfce997e1b361fc5edfc59ae643dd2b26a549e42dbd265",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/recovery/PerformanceRecoveryDeadlineStore.java": "2128d116b4a18ea4ffd6cdc759111c6cf52ee6432dc72fed8fd624f5cb96985a",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/recovery/PerformanceRecoveryProperties.java": "cbc3dc6182901eef9738a67f3bd25711fa7fdd2af3febca1e629ee1c17c8369b",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/recovery/PerformanceRecoveryWorker.java": "09e5e13cea89c66259edd065c4848ad1d4e78860f76634dc317034d8feeeffa9",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/recovery/RedisPerformanceRecoveryDeadlineStore.java": "8bec2edcfa30e9815ad3b6da79fe087bcaff184c98d2c783f00002fcaf67d155",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/redis/leaderboard/RedisRoomLeaderboardStore.java": "020568119151c1762e5f07564fecdb770c77add67e1f378dca0eefefaa93b396",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/redis/leaderboard/RoomLeaderboardEntry.java": "9f2ef083391f871ba3f8dffbc0457cb38fd9e25e8a17eb66f80a147ace893652",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/redis/leaderboard/RoomLeaderboardStore.java": "dd265d40ef6de8e6b2c04b5bbe9cf5e6f091c617c9d3ea591d2fae9d4a243cbc",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/redis/performance/PerformanceSettings.java": "8d3a4b48d0c0d1be1d2841c4eff01e1f2a5fdca7b3af50397845fa732005585b",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/redis/performance/PerformanceSnapShot.java": "b2997b4ca706e5277c9cb69b09993be6b5e6fd61975da0f3e315372e5483aa17",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/redis/performance/PerformanceStore.java": "684ed53fb3b6b4a710118d34ff283a7c523f1ee3522ca0937947c993cf059e86",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/redis/performance/RedisPerformanceStore.java": "1ce68a589e9ad91b4ccb69fd7c1a8aab657a6a14501a541a244fb8aae2b172b6",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/service/PerformanceCancellationProcessor.java": "77647bb3c7d78826381ccc6628fba290c224565dca24b5acc6c1081a9050824b",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/service/PerformanceConnectionRecoveryService.java": "438fb820c49d8475eeeca8cec28c3657e9e07e71118ac8f65b259bdb24afa2d4",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/service/PerformanceDemoService.java": "78d9baf63279b0b76e3ce2df2b843ad93c2fe497d336e4df5372d2c94582e4a7",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/service/PerformanceRecoveryService.java": "60c60fff118b2c48d41f4612c49c43b836793f2a83f2060bbb13a838f244dbc8",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/service/PerformanceService.java": "0616da35099d457c712b2919bb8298ca74cf45057a954bacab31c0b863c07583",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/service/PerformanceTransactionSupport.java": "3f056e6864297b40675d509660b3633cbd7bccda2a80aa2fe73caf793f656381",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/type/PerformanceCancelReason.java": "47578468077b3c50d9e3f065c13a8b1440fd3fc69cb7845adfe35986479f800a",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/type/PerformanceStatus.java": "cf8cd2f2afc8bcfe9ddf596ca9c065e220b8a56e9e6a046d41cccfca74721388",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/websocket/PerformanceWebSocketController.java": "8cca6ff1fda5e02cd514c8574ea37178fdb7f9b92f85b6640900ee1671834383",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/websocket/PerformanceWebSocketEventPublisher.java": "438b74707b8c79008cfd9434314b2e47a8fb79d6baa66f3ebcb7daee7f2f1216",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/websocket/PerformanceWebSocketEventType.java": "bdd921758c6663385e4a9273f4c095a3ed65a616c4eec90b6036fb5b5d1268f0",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/websocket/payload/LeaderboardItemPayload.java": "8d1f90c59f511c5986adf3b2981f6d45cd576942f041cec07325c9a6f0fbc5dc",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/websocket/payload/LeaderboardUpdatedPayload.java": "f51fffdf144eee3afca5572f2f62094c08cde948aa947a1a8d5d2bd9daa2c833",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/websocket/payload/PerformanceCancelledPayload.java": "f306c4feabc295bac2d564a90d6b4323bbe4020a9c3bfc712c6679954d28027d",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/websocket/payload/PerformancePreparationStartedPayload.java": "e80a21ddc95c3fefa7518dd8cf197290daff8dbe92f5d8316542a0dd47ba2479",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/websocket/payload/PerformanceResumedPayload.java": "75a6b5c1625678b6b56f230cf4dbe4fd015b5ff92898d4efbacf40c8bba700f8",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/websocket/payload/PerformanceSettingsChangedPayload.java": "ca5a187380b9a9dd49f2630240698ccefefa459bc8bc84c0505c58f031eb2723",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/websocket/payload/PerformanceSettingsPayload.java": "ceeb2b06c175371d6934857948f79f3f00e9fd4c891ec579fd50868cedf37e54",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/websocket/payload/PerformanceStartedPayload.java": "3f09ddfe43eb1c9b46b2a7c666825344bb940b62bd3c1a43492fc98f1827c476",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/websocket/payload/PerformanceStateChangedPayload.java": "e4794f03ddfca24bbee564b042688204274a5c62b480f4c8480f465b6aed19ac",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/websocket/payload/PerformanceSuspendedPayload.java": "1de25f8ca359410d23fe7f71c7c12451d8cfe434878781b0fe72c77eef401a37",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/websocket/payload/PlaybackFinishedPayload.java": "aa5122b3ac2e585bb7758fd59e6451e028702292f73561f1119741cd9ab0fb4b",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/websocket/payload/PlaybackStartedPayload.java": "015c01935b9fc654d51cdf204bd7baac99aa626761b22f45cf48a425dd8042a9",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/websocket/request/PerformancePrepareRequest.java": "d81c3dff41a0cda787e077e7caf3a78ad5bd974e9b4b2d5e03c6928c5e379e21",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performance/websocket/request/PerformanceSettingsChangeRequest.java": "4b5bc81fe1091da33a9810f3769d40ca9fe4a2a0543a7deec55fd408a1302462",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performanceResult/controller/PerformanceResultController.java": "c84f2ac37cd93119398cee603c3aa52acbcd22f166432675b9ad70a2026d6115",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performanceResult/dto/PerformanceResultRequestDTO.java": "76cd9c58eeb85a2efa96a3d820d9820feac65bb379eb1756d9587648335a836c",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performanceResult/dto/PerformanceResultResponseDTO.java": "bcf45ae106a78141835e2931148b614a19bbd214919c2d5ec80b5558f017cb58",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performanceResult/entity/PerformanceResult.java": "6df1ac486ee5279bc062ab5634fcf74540c568ea4a8d7c6681f2d4f5a76b3b17",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performanceResult/repository/PerformanceResultRepository.java": "c5932122bca861716766b9985301fdfc79d2bb54ca3621650481d20314cdc17f",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performanceResult/service/PerformanceResultService.java": "1021c48fa497f9e1b59e7c61f69ea06de877dd559e42b3f1eaf348eb3392dc5d",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performanceResult/type/PerformanceSettingsChangeSource.java": "6a4010be926a1b1c91b1ad95c21d088d955a54923707f1f0576f0165b7352e9e",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/performanceResult/type/PerformanceStatus.java": "1b2e5f2200c86a6fb77a6775a999241efcb320892817357756ea71f7f25fc900",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/controller/RoomController.java": "565d9ca4443d26d6fedf28400070eb2aa0aa02e2488cd06e9b79693ee8450440",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/dto/ActiveCardSnapshotResponse.java": "7ece384bd3b49e3438d894f58688f8884e9b7ac9e648f24dcb2a1414aa44e57d",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/dto/CardUsageStatusResponse.java": "9dc55d6da09e660eb16735a45b68a40f14544cfdb383c6ee357ec82d52bc7efe",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/dto/LeaderboardSnapshotResponse.java": "9425c3bc23da26f2bd792bfc83336634604af32c0d2df2a7c3642216e75301b0",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/dto/MyCardSnapshotResponse.java": "5795a5f8c889f2fd9315b7ad50d94d3a654821d70f2132032839414dc2f287db",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/dto/PerformanceSnapshotResponse.java": "2f276c0d56688cacfe30ca259dd0df074b1455531506812fdd7e9c162452fecb",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/dto/PlaybackSnapshotResponse.java": "348125c56bce32f8165eba17ea35b634044a0ce8a6ffdc387635a55d0a1a84be",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/dto/RoomCreateRequest.java": "463d333b2f09063657e3de49cd2e564216547f1226cfee12b46197c1c7bbf54c",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/dto/RoomCreateResponse.java": "85321fecf7b62453c0ca0bc35e6d1820a9be2d75ba135d397a846a06426e9fa6",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/dto/RoomInviteResponse.java": "7694e5f6c9cdb2a310bf80c472d1d630f177ab27d3746e3f058c8a928137ef63",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/dto/RoomJoinResponse.java": "87adb0521b57f8d80d17e9f979d26c4115b8da86a5784c47fd33b26920d52c33",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/dto/RoomParticipantResponse.java": "f78c8c805961353d78336b9b2323adda57c5dd6582cd73b684df803f7b88a768",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/dto/RoomPerformerSelectRequest.java": "f6d692c8479665647fd30341a372de67657a8c714378c719c6ebfb72d0f28e43",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/dto/RoomSnapshotResponse.java": "a3ef526febfca1bd01e5bd1557014f8958d154adf9b27ed62a57c00c610ccee3",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/dto/RoomTokenResponse.java": "07fac4af4b4cfb0583af878840388c646bf62b5fc1b1f109aee257ec2a46c1a5",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/entity/Room.java": "4b7d5106300a93d3b11467813b7a7cbd3a59f18aeab67e7a80b746e4d1a8c247",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/entity/RoomParticipant.java": "39dc9a31506ee941c7abae182fb7ccdd50e6e92b7e02fde7ed57bff0e90b97bf",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/recovery/ParticipantReconnectDeadlineStore.java": "6f29063c88d217ff814ce3a7f1ee1469c62f58bfd23c30d42e92d2d7b8b5b7c5",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/recovery/ParticipantReconnectWorker.java": "ae5532844fe3b85b876320b1a61870a96e7a5f0e19d989fb7fde1974c258b78d",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/recovery/RedisParticipantReconnectDeadlineStore.java": "e2b683b2f2eeafec0e67f0718e721b41597b661e2dbb868428f9421fdd105fb7",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/repository/RoomParticipantRepository.java": "a4ed84027d4527fa125d17d996bc0874b2cfcd1fec1b30fc6bdbebbc88b3bc7a",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/repository/RoomRepository.java": "6cebcdadbcf89177853b7de4552a2b00c3e69f815b3f1da2c43230513a3e6f5f",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/service/RoomService.java": "272ff5427e81f0b6aab4260bdddb645b617b3494cce945b9d5436fb686eb3eac",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/type/ConnectionStatus.java": "526910de156b5c0d30e8cf59d8457a66f766c43d44c20b06bd188967d5f06f78",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/type/ParticipantRole.java": "907892fc11f076007d6e687c4f5cde97e759abf8b58f6af26a4736e8f4bdb632",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/type/RoomMode.java": "2505b8c359e6939804dd5d6d359fe8dc1b59ba2e5d31150c53232eccc9103d7a",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/type/RoomStatus.java": "47ad11e919f132e1b11f87cc524970deca9272b902e799fa3c49ff10698ccf53",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/websocket/RoomWebSocketController.java": "4b6548465c1abbccbacd5413bfd4c5e54de50df0a1a384c541f9dbd5083d354c",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/websocket/RoomWebSocketEventType.java": "d4dae10b1c73410b2bf0b1b448e27b642d9d7de6e116f6861242280805379be1",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/websocket/payload/ParticipantConnectionStatusChangedPayload.java": "f388bc041bf298ae35e146b31f9da8210b8e1e56a73f438ffebbeb33cfe96f93",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/websocket/payload/ParticipantJoinedPayload.java": "7ba5da73dddcc1d0f200c6aa74856517376f0b6baa8c52478fe5a2d7394ca7f5",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/websocket/payload/ParticipantKickedPayload.java": "f5a4f3f335becbf11b969fc5ba70bafbfeb5cf4ad1cbfbe1bee0e1fa691b8876",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/websocket/payload/ParticipantLeftPayload.java": "66e41e57c9f4bf3f3187e06adc0e7b5eb9a70e4e291d929ac1c44c7aebfa391c",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/websocket/payload/PerformerSelectedPayload.java": "d337bf4cd5fac66ef1426b11411a96621cd2866cdfd50423e84780687c493427",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/websocket/payload/RoomHostChangedPayload.java": "36604e7335e2b965da2644a823f7bf9136a5bf4a2e386896622d74ace88cb0b7",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/websocket/payload/RoomParticipantChatPayload.java": "31f84fab4c40f2744318cdf9c4b336f663673de214ee5c1ddf35ed7d7b1355b1",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/websocket/payload/RoomTerminatedPayload.java": "ad000b98bb5ccaf470fb733ee89bad4377244a8ce46c1b8f3eea94743c36e487",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/websocket/request/HostChangeRequest.java": "a659a653df41f79127013bbf006ba0b031f48542aa97a438fa63693461893ebf",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/websocket/request/ParticipantChatRequest.java": "24cfec5b0ab1d6114dee6efb17b2feffec5ca8eb0248021a60b6f0a2864f785b",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/room/websocket/type/ParticipantStatus.java": "ff663af7f88a0b49757e906e495c5cb819d01b0dd3dc00c7f548901dc9dcba06",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/song/controller/SongAnalysisCallbackController.java": "30c94c09a9b8fb5d28ec0940474a610cb0cf49650cb8f020b01ed2afb9e2580e",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/song/controller/SongController.java": "336969b1e441474e317449b9b61909a238283d97502bccf4ca19a74022551643",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/song/dto/SongAnalysisResultResponse.java": "650700cd124d35cea0bc0a162980b4338e1005b859af540625feb38842f7c57f",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/song/dto/SongLyricsResponse.java": "3d9101ba2d3960eb75b89b0b3d851a07b5defaa783c33666d08b103dc7ea789d",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/song/dto/SongResponseDTO.java": "c9bfff799ff9044df5b01900dcb1f686f9f01c841e49d64a8f4a2d2780e7508c",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/song/entity/Song.java": "655aebacd7d3dfd0fc454396ca9f6d63427a26bbd9a94fcf0ce26de400640dab",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/song/repository/SongRepository.java": "bda9fb3599354dab828f6a7691682a78b7dac394dca600dfd53e4497433e4792",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/song/service/SongAnalysisService.java": "cc39b6671019db39c73cfad8438d5a3713544b662e3dc4a72944d3b653b358dc",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/song/service/SongService.java": "eaf9932d4e147bc9d2050aff6e1805329830d574debb28762a3f0ae6511af811",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/user/controller/UserController.java": "967c65500e0d70057ad67f24f3b67e578b958dc3270df873dab615b7122f024a",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/user/dto/MyPageResponse.java": "96c411b705d1dfa317abacb7f3e34d003c30fa5deb4fd58618b8efd8314bbfaa",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/user/dto/NicknameCheckResponse.java": "72dc7ac43a8e2c4d368c84695b46cbfd70603254a235b7325822b9bc880924ec",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/user/dto/NicknameRequest.java": "f2d2690d6785e5a7aa26be6996ac1afb8c53c1e804c3e16e6f4a57d77a67cf13",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/user/dto/PerformanceStatResponse.java": "e4da1441f555052fd994fe1541a3b272e43e857f23585548d912a2c11775ab93",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/user/dto/ProfileImageChangeResponseDTO.java": "1b1067cbc5210915fbe6172c9027ae108961776a87a021f329175df46324e094",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/user/dto/UserResponse.java": "299417341fbbb139316988788c3fb9e9b33f8d9236bf2057d9cf711b386a4868",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/user/entity/User.java": "0b8a8a603108683c0a9fe4231c533c226a9f20f617b616e04a9b223dc629ed0f",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/user/entity/UserPerformanceStat.java": "b5c0745d07e433180c7d37ba99da023ede34040eb178a808b8b07f420f745b8e",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/user/repository/UserPerformanceStatRepository.java": "be327c771240c43803af351270e4b89371bd530b727e5338519ab261e3cae722",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/user/repository/UserRepository.java": "80a8130fcbe5b3a12e94820710b42df5f7333a18d8a4371f47a9f6b0f706888b",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/user/service/UserService.java": "85d2f5ecad64ef19a0d52c23b1097ce95c18e1660e83f48b43d59c889dedbbde",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/user/type/OAuthProvider.java": "380703dcadd5d5559d9409dcd540449653d7e0d7b558b980bb1c71cf285a7ab5",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/domain/user/type/Role.java": "ad277f7a8add089ccc7ae543e14a825c9ef43d347ced74ebd2c92318f516ba5b",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/exception/BaseErrorCode.java": "56bdc935ff71321885ff77838e927dd82c52550357c25a425d1dbef39a013fde",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/exception/CustomException.java": "73eb9eab1cee944f2f110b1fcca20dcd46b4adb0b9900bd8254e8d7fb429cb8c",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/exception/ErrorResponse.java": "6f7e72f50c3e35c55f3a8a16a01c8656b69c42c4ec309f7119157533231c040d",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/exception/GlobalExceptionHandler.java": "d4ad284a1d840193e462fdd4c43dfcbd60933ee33b57722043f5bd94ba672f8a",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/exception/auth/AuthErrorCode.java": "6f1617a45b973df1a13fcf0cfefbe3310df396891455bff8605600eb961c7334",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/exception/card/CardErrorCode.java": "f4b9a435581f4ce1679d58e71b7406fc493189edfeaf24dd19d8c73947e7fc87",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/exception/favorite/FavoriteErrorCode.java": "ac91a959f82c0660b37ea96a98cdd03bb36c664cbfe1a370b2cd6df2bf9319bc",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/exception/lowlatency/LowLatencyErrorCode.java": "3f8e0cd68e9ff63b39ad8a0ad79442c6df45b7ce8b04948380fb57e33bec708f",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/exception/performanceAnalysis/PerformanceAnalysisErrorCode.java": "7c920bdef3e93b0db7ee8f24b7199c0a45d2e7f8aacd2be8ec99390c8f331e46",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/exception/room/RoomErrorCode.java": "0ffb5ee6a628b45c397476246a68b0ad835104a01c66d14319c568c2cda93d5d",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/exception/song/SongErrorCode.java": "348c326e31be7994954fcc8f709bac78ab85289e173baa0856c308f3f3466cfa",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/exception/user/UserErrorCode.java": "fc1772f00f22ab1b1e5051c4956a17d3248a44090860b899c14187ae281adbcb",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/exception/websocket/WebSocketAuthenticationException.java": "84c859059ffcf7a1a1b7bfc4b200a96ef425d0967dedbb2e11212c636e59aa46",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/exception/websocket/WebSocketBusinessException.java": "3a1e0115907d9aaec58c15f4de06492ccbdea6dfc5e5898cd7e6b59c5c359ec8",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/exception/websocket/WebSocketErrorCode.java": "8a0e5c046b5a0a331092752ae479623970748c2b53308d6abbbdc3aee59464d9",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/exception/websocket/WebSocketErrorPayload.java": "589cc46162ecbcef9b5132dbc8dfbba74bf92f06361ab409d6432a975567a926",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/exception/websocket/WebSocketErrorResponse.java": "42f67176b59fb7eff387c17d75d5f7f3ae4ddf2c3a78d3b279df85732342d9e1",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/exception/websocket/WebSocketException.java": "e0ac2014f3da3db57a4dd13fcef58f344cc07ce4537fb61c22b7dc424d0b18ce",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/exception/websocket/WebSocketFieldErrorDetail.java": "db2e6bc30febe218af66f217f935fc50345c12c84845d140dbcb595560329263",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/exception/websocket/WebSocketGlobalExceptionHandler.java": "c88e306727b132ec4135c4210092588f9535f5cdd35821e2bd504a5c6d958a5b",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/logging/AccessLogFilter.java": "c26f1469e6bbbcb086adf196d10a113ca8210e927ce9bf2b3c0e4b7a1e5f50c4",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/logging/LogMdcKeys.java": "a5ea28fe98d54af3f4484009c6784f3508b87d70efa93ebbe967c4bae3f84e74",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/security/cookie/CookieProperties.java": "a8c66ad958ed4dcb7f243e5c9da2661ceb161ce0e1beb0d6d4f4601e7a70db3c",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/security/cookie/RefreshTokenCookieProvider.java": "a95e2e676b18c2991157eeffa76012f6b9bdd92cba59705b91dee866b79968aa",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/security/jwt/ActiveSessionService.java": "b8e5e5274d3c00339cdcd88c151ff4fc5c1686b1c5d0973d40ab577d446195ab",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/security/jwt/AuthenticatedUser.java": "3d25657bb0a2512d598ad79b8901426898f32918d76236f047ef5c0f452b601b",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/security/jwt/JwtAuthenticationFilter.java": "4b187ebf4d1454398b53e4972bcf0addaf3c806a1a7d6bbf2db53bd65c280c2f",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/security/jwt/JwtProperties.java": "6231f72c666976e426d9c35c7c7d15458b501b1b7ce02a3a5dbf8e6c2ad3b745",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/security/jwt/JwtTokenProvider.java": "89962a6185e2cdb528466aee549b33f002d9eb5af8b084579215534c07ba6cc2",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/security/jwt/TokenBlacklistService.java": "b253c7048e03679ce4704b5c6409ca63f4939f96794c019b8b71f070d03fe925",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/security/oauth/CustomOAuth2UserService.java": "f9d9b31dfaa70fd81c0839e6c1bfb514157d9a49231fbe1e4f4d88b0e999ca39",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/security/oauth/OAuth2AuthenticationFailureHandler.java": "875cda2e38ad7d7767f1fdb3708262319891bdb54b7bc575a4eaad65bd4d82e7",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/security/oauth/OAuth2AuthenticationSuccessHandler.java": "776448d5c3c93c2f7811e1a58279ae6d0f20bc49750e462f8fad7d8d1c497bfa",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/security/oauth/OAuth2Properties.java": "9eb646c66ec37025abfbb73631f27410e2b4be1218b9793d74b3573f6b87830c",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/security/oauth/principal/CustomOAuth2User.java": "f1c051f84652e29abf497836f931540d65824576cad2a3ae4a04d322ef45fa69",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/security/oauth/userinfo/GoogleOAuth2UserInfo.java": "97e0370c2f0abab2b3ca51caf8b0b43282d30d768dc847ce9680c32473c3cce2",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/security/oauth/userinfo/KakaoOAuth2UserInfo.java": "1817c2f5463afe34c51b845ad14b371a793cb154bd810d1019bbf671bbbead8f",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/security/oauth/userinfo/OAuth2UserInfo.java": "b06bc4dbbfcb115b020f3f5a36818afc905437b1a99cb2d5c2c95176691c81d8",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/security/oauth/userinfo/OAuth2UserInfoFactory.java": "a86b841ec2f1ac1d84a1843603550a4380762fdd2a4bb887ba31b689702d7fdf",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/security/websocket/WebSocketAuthenticationInterceptor.java": "22a2903b4ed9a8df697bd2ea300f709f9fa9d061e1cdcb46da09d82711de1570",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/security/websocket/WebSocketAuthorizationInterceptor.java": "d0f9210e86870582fd96f35e5ebd91c4ce2847cd71cd877444cf31ee78238b7d",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/security/websocket/WebSocketStompErrorHandler.java": "33cb559598dde7d07de915a637ac3f0778e65239240e824e8098acd952704fc0",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/websocket/destination/WebSocketDestinations.java": "a3a7c3d10f2a689dd713af928e7d90c2d6259c2c46c3b0a8c08851a643429c12",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/websocket/message/WebSocketEvent.java": "9874206e62aed3ebc5163d12f3fe3fd6a99dccc70e4b80cc1c827a7de66d1461",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/websocket/message/WebSocketEventType.java": "2b8258ff43a9c21585f7e455cbf01db4d2921759dbca67413c528497a22686c3",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/websocket/ping/PingRequest.java": "f9e843b03e975ff53b748cab883e6fc11594da21321fcc1fe78d05389b02fe0e",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/websocket/ping/PingWebSocketController.java": "7a656b7ded52906fd84adfffc8ff6f245a44233044162212afed3f27d25aeba4",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/websocket/ping/PongPayload.java": "91264e6146dfa6ffa4f17c5f642b28f83d265b28134dcddf2af6112ecfda1aa9",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/websocket/ping/SystemWebSocketEventType.java": "c08a615ed7170a9c9d3aff690b2be9be384693ab4bdb934137ba6dc6385802a7",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/global/websocket/publisher/WebSocketEventPublisher.java": "6444f4c508d21b4bbb25b7e4369811d9cef9fb04bcc35820b077376901c3268a",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/integration/ai/AiServerAuthenticator.java": "d2d0aa04fd439a059ce6434ef7a505cd1622b3052065cd167d33501299ef16d3",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/integration/ai/AiUploadTicketProvider.java": "6e79c758c74d3f3280932a3e8524c42b75e32909a5d1c6e62b040266e16d3b4c",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/integration/aws/AwsS3Properties.java": "18e9845798e8694fffd0f6691cb13b9c23724ea7c62797db8e8a090454f0f28b",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/integration/aws/S3AssetFolder.java": "05386905cae2ded936db12406d4f0ef06bb61e2ab811cbdda8daca1702144fb2",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/integration/aws/S3StorageService.java": "6ec9022f728aeb763a9b262575382683f2b97353aa1e2d73f2b69d68855ea4d9",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/integration/openvidu/MediaSessionGateway.java": "7770d54a0055ef55c81f09f2e0abf087f9c640e5e9953432ee5e5dd685067e6d",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/integration/openvidu/OpenViduGateway.java": "f7719c3255ecbbea6ec39fb0828a4a8880e0dc127be3fd2edcc735b3c5e4701d",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/integration/openvidu/webhook/OpenViduWebhookAuthenticator.java": "f93a7e991aa0a20ddaeeb2982baa167da465face43383bb61ebfcb9cd2ddb47c",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/integration/openvidu/webhook/OpenViduWebhookController.java": "f70e7062604c595b09fafe7e8f4e7d9eec20fef264f859c1dc26e6b24f731649",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/integration/openvidu/webhook/OpenViduWebhookService.java": "80307b701e2e8b7a5fd97f99541a73dc22714c7ded038cb31cc5da8fd139da68",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/integration/openvidu/webhook/dto/OpenViduServerData.java": "00d9fe29d574c6b35b7e37140e61156965dbed978918fd96a81058cf7e06c14f",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/integration/openvidu/webhook/dto/OpenViduWebhookRequest.java": "5564e1462f9c8c553200e620ff3f63e47ba63e91afa4de792c9bc999e535bbc9",
+    "backend/ssasukae/src/main/java/com/ssafy/ssasukae/integration/storage/package-info.java": "46aa18d3531232dab5283d2a30afdb12268307c3e43d4e0b2d45321a060ebd80",
+    "backend/ssasukae/experiments/card-scheduler/java/experiment/CardExperimentApplication.java": "e495689510945b4b8dfa2634a81f6817d486affbd431626f5550792acd109d93",
+    "backend/ssasukae/experiments/card-scheduler/java/experiment/SnapshotRecoveryWorker.java": "48092c06d362c7d7b2ee7387001bd86517f6b12f2cb2baaef1442909ee229ef5",
+    "backend/ssasukae/experiments/card-scheduler/java/experiment/StompProbe.java": "0c036fe21c5ad326bf54b79f0a7cf82eef2b09c2a3582ff11f7c55af99d9e1e1",
+    "backend/ssasukae/experiments/card-scheduler/java/experiment/UnitChecks.java": "15bdbbf4c7eb162583bb34bc76d53a0ceeddbcb290d20db6905f52817639297b",
+    "backend/ssasukae/src/test/java/com/ssafy/ssasukae/domain/card/service/CardServiceTest.java": "9db1be55790f7804775db2c8ccc71f9bae829a0dc047ac44564a6c3502c07ece"
+  },
+  "compileExitCode": 0
+}

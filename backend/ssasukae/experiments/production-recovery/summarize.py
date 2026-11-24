@@ -1,0 +1,62 @@
+"""Generate the measured report only after all independent evidence checks pass."""
+import csv
+import hashlib
+import json
+import math
+from pathlib import Path
+import statistics
+import subprocess
+import sys
+
+HERE=Path(__file__).resolve().parent
+RESULTS=HERE/'results'
+
+def p95(values):
+    return sorted(values)[math.ceil(len(values)*.95)-1]
+
+def main():
+    subprocess.run([sys.executable,str(HERE/'audit.py')],check=True)
+    rows=list(csv.DictReader((RESULTS/'fault-matrix.csv').open()))
+    ordinary=[int(r['reconnectMs']) for r in rows if r['case']!='LATE_RECONNECT']
+    end_delays=[int(r['endDelayMs']) for r in rows]
+    cases={case:sum(r['case']==case and r['outcome']=='PASS' for r in rows)
+           for case in ['ACTIVE','PENDING','LATE_RECONNECT']}
+    summary={'cases':cases,'duplicates':sum(int(r['duplicateServerEvents']) for r in rows),
+        'ordinaryReconnectMs':{'median':statistics.median(ordinary),'p95':p95(ordinary),'max':max(ordinary)},
+        'endDelayMs':{'median':statistics.median(end_delays),'p95':p95(end_delays),'max':max(end_delays)}}
+    (RESULTS/'summary.json').write_text(json.dumps(summary,indent=2))
+    report=f'''# 운영 코드 반영 및 검증 결과
+
+카드 예약 복구와 서버 간 WebSocket 전달을 `src/main`에 반영했다. 기존 실험 시제품 워커를 등록하지 않고 운영 `CardRecoveryWorker`, `CardService`, `RedisCardStateStore`, `RedisWebSocketEventRelay`를 실행했다. AWS 배포는 수행하지 않았다.
+
+| 검증 | 결과 |
+|---|---|
+| 단위·실제 Redis 테스트 | 26/26 통과 |
+| B→A 방 이벤트, A 연결 유지 | 100/100, 순서 유지, 중복 0 |
+| B→A 사용자 전용 이벤트, A 연결 유지 | 100/100, 순서 유지, 중복 0 |
+| B 워커의 실제 카드 시작·종료, A 연결 유지 | 10/10 통과 |
+| 활성 중 A SIGKILL → 살아 있던 B로 재연결 | {cases['ACTIVE']}/10 통과 |
+| 시작 전 A SIGKILL → 살아 있던 B로 재연결 | {cases['PENDING']}/10 통과 |
+| 종료 후 늦은 재접속 → 스냅샷 정리 | {cases['LATE_RECONNECT']}/10 통과 |
+| 두 JVM 종료 → 지난 PENDING을 B 재시작 후 취소 | 통과, SYSTEM_CANCELLED·ASSIGNED 유지 |
+| 두 JVM 종료 → 만료 ACTIVE를 B 재시작 후 종료 | 통과, USED 유지 |
+
+일반 재연결 20건의 지연은 중앙값 **{statistics.median(ordinary)/1000:.3f}초**, p95 **{p95(ordinary)/1000:.3f}초**, 최대 **{max(ordinary)/1000:.3f}초**였다. A 종료 요청부터 구독·인증·스냅샷 복원이 끝날 때까지이며 클라이언트의 3초 재시도 대기를 포함한다. 늦은 재접속 10건은 의도적인 8초 대기이므로 이 통계에서 제외했다.
+
+서버 카드 종료 이벤트의 중복은 {summary['duplicates']}건이었다. 저장된 종료 시각부터 서버 이벤트 기록까지의 지연은 중앙값 {statistics.median(end_delays)}ms, p95 {p95(end_delays)}ms, 최대 {max(end_delays)}ms였다. 일반 재연결 20건은 종료 이벤트를 정확히 한 번 수신했고, 늦은 접속 10건은 오프라인 중 종료 이벤트를 수신하지 못한 뒤 최신 스냅샷으로 정리됐다. 지속 시간과 공연 재생 위치가 새 서버에서 초기화되지 않았음을 함께 검사했다.
+
+운영 Java 소스 전체 239개와 테스트·검증 헬퍼를 포함한 249개 입력을 캐시된 Java 17 라이브러리로 컴파일했다. 전체 Gradle 빌드/전체 테스트 실행은 아니다. SHA-256 입력 대조, 실제 STOMP 세션/구독 기록, SIGKILL 종료 코드 137, 서버 이벤트와 클라이언트 메시지의 교차 검사는 `audit.json`에 기록했다.
+
+재검증 중 저장소 테스트가 실행 중인 워커와 Redis를 공유하면서, 워커가 존재하지 않는 테스트 방의 카드를 정리해 1개 테스트가 실패했다. 테스트 전용 Redis를 분리한 후 26개 모두 통과했다. 최초 실패 로그는 `shared-redis-*`로 보존했다.
+
+**이 결과는 모든 장애에서의 무손실을 보장하지 않는다.** Redis 상태가 보존된 JVM 장애 및 서버 간 전달을 검증했다. 상태 변경 후 Stream 발행 전에 죽는 구간, Redis 자체 유실, TTL/Stream 보관 범위를 넘는 중단에는 추가 설계가 필요하다. 브라우저까지 정확히 한 번 전달하는 보장도 추가하지 않았다. 실제 브라우저·미디어·AWS ALB 및 부하 검증은 포함하지 않는다.
+
+구현·설정·재현 명령과 제한 사항은 [README](../README.md), 수치 원본은 [fault-matrix.csv](fault-matrix.csv), 독립 검사는 [audit.json](audit.json)을 참고한다.
+'''
+    (RESULTS/'REPORT.md').write_text(report)
+    manifest={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(RESULTS.iterdir())
+              if p.is_file() and p.name!='artifact-manifest.json'}
+    (RESULTS/'artifact-manifest.json').write_text(json.dumps(manifest,indent=2))
+    print(json.dumps(summary,indent=2))
+
+if __name__=='__main__':main()

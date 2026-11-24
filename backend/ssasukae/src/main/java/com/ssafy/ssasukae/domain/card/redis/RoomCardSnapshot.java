@@ -28,6 +28,21 @@ public record RoomCardSnapshot(
     OffsetDateTime startedAt,
     OffsetDateTime endsAt) {
 
+  /** Stable execution identity: an old callback must not act on a newly approved card. */
+  public boolean sameExecution(RoomCardSnapshot other) {
+    return other != null
+        && java.util.Objects.equals(roomId, other.roomId)
+        && java.util.Objects.equals(performanceId, other.performanceId)
+        && java.util.Objects.equals(sourceParticipantId, other.sourceParticipantId)
+        && java.util.Objects.equals(cardId, other.cardId)
+        && approvedAt != null
+        && other.approvedAt != null
+        && approvedAt.toInstant().equals(other.approvedAt.toInstant())
+        && activateAt != null
+        && other.activateAt != null
+        && activateAt.toInstant().equals(other.activateAt.toInstant());
+  }
+
   public RoomCardSnapshot active(
       OffsetDateTime effectStartedAt, OffsetDateTime effectEndsAt, Integer valueBeforeEffect) {
     return new RoomCardSnapshot(

@@ -1,0 +1,1 @@
+{"issue": "WSL variables not propagated to Windows Compose", "excludedPhase": "invalid-configuration-smoke", "fix": "Explicit --env-file and actual container configuration verification"}

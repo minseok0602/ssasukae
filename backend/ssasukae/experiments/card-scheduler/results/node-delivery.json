@@ -1,0 +1,20 @@
+{
+  "raceSamples": 5,
+  "remoteNodeEndClientMisses": 2,
+  "samples": [
+    {
+      "roomId": "191",
+      "winner": "app2",
+      "clientConnectedTo": "app",
+      "clientEnds": 0,
+      "serverEnds": 1
+    },
+    {
+      "roomId": "194",
+      "winner": "app2",
+      "clientConnectedTo": "app",
+      "clientEnds": 0,
+      "serverEnds": 1
+    }
+  ]
+}

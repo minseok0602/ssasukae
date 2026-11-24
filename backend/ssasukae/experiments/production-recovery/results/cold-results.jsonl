@@ -1,0 +1,2 @@
+{"case": "COLD_PENDING", "roomId": 42, "outcome": "PASS", "finalCard": "NONE", "assignment": "ASSIGNED", "deadline": "2026-11-20T17:37:18.365099069+09:00"}
+{"case": "COLD_ACTIVE", "roomId": 43, "outcome": "PASS", "finalCard": "NONE", "assignment": "USED", "deadline": "2026-11-20T17:37:47.670877235+09:00"}

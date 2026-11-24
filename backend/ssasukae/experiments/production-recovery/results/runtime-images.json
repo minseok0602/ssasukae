@@ -1,0 +1,37 @@
+{
+  "ssasukae-production-verification:local": {
+    "id": "sha256:9d69f4aa4457b36b3900ae226f6e6b782775679167ec7f1d31a8b6c5ae7a998f",
+    "repoDigests": [
+      "ssasukae-production-verification@sha256:9d69f4aa4457b36b3900ae226f6e6b782775679167ec7f1d31a8b6c5ae7a998f"
+    ],
+    "created": "2026-11-20T08:25:26.422741074Z"
+  },
+  "ssasukae-lb-experiment:local": {
+    "id": "sha256:190aa773e429389f6f570bcaa441a0e664f37726342d84f0430ff55566188191",
+    "repoDigests": [
+      "ssasukae-lb-experiment@sha256:190aa773e429389f6f570bcaa441a0e664f37726342d84f0430ff55566188191"
+    ],
+    "created": "2026-11-20T06:45:30.013602521Z"
+  },
+  "mysql:8.4": {
+    "id": "sha256:c592c15aaf4a1961e15d82eb31ea5987dda862d1c4b1e93424438c0e91dc1f8d",
+    "repoDigests": [
+      "mysql@sha256:c592c15aaf4a1961e15d82eb31ea5987dda862d1c4b1e93424438c0e91dc1f8d"
+    ],
+    "created": "2026-07-16T21:12:35.723426161Z"
+  },
+  "redis:7-alpine": {
+    "id": "sha256:7f7d30b7fdd09467bac58198a1f166dd69789d348d4fe859cccb20e0cf287fbe",
+    "repoDigests": [
+      "redis@sha256:7f7d30b7fdd09467bac58198a1f166dd69789d348d4fe859cccb20e0cf287fbe"
+    ],
+    "created": "2026-11-09T20:09:32.419853068Z"
+  },
+  "haproxy:3.2-alpine": {
+    "id": "sha256:7816a9801a6846b912bc37e48529808e2fa87c3c47992441940f68e393ebcfeb",
+    "repoDigests": [
+      "haproxy@sha256:7816a9801a6846b912bc37e48529808e2fa87c3c47992441940f68e393ebcfeb"
+    ],
+    "created": "2026-11-18T22:30:25.734298854Z"
+  }
+}
