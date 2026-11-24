@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "matrixRowsChecked": 30,
+  "failoverPasses": 30,
+  "crossNodeRoomMessages": 100,
+  "crossNodePrivateMessages": 100,
+  "crossNodeCardPasses": 10,
+  "coldRestartPasses": 2,
+  "junitPasses": 26,
+  "actualAuthenticatedSessionsVerified": true,
+  "actualUserAndRoomSubscriptionsVerified": true,
+  "jwtArtifactMatches": [],
+  "currentCompiledSourcesVerified": 249
+}

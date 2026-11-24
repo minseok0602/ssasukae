@@ -1,0 +1,36 @@
+[
+  {
+    "case": "normal_candidate",
+    "passed": true,
+    "counts": {
+      "CARD_ACTIVATION_SCHEDULED": 1,
+      "CARD_EFFECT_STARTED": 1,
+      "CARD_EFFECT_ENDED": 1
+    }
+  },
+  {
+    "case": "expired_pending",
+    "passed": true,
+    "roomId": 61,
+    "counts": {
+      "CARD_ACTIVATION_CANCELLED": 1
+    }
+  },
+  {
+    "case": "expired_active",
+    "passed": true,
+    "roomId": 62,
+    "counts": {
+      "CARD_EFFECT_ENDED": 1
+    }
+  },
+  {
+    "case": "future_pending",
+    "passed": true,
+    "roomId": 63,
+    "counts": {
+      "CARD_EFFECT_STARTED": 1,
+      "CARD_EFFECT_ENDED": 1
+    }
+  }
+]

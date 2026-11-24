@@ -1,0 +1,10 @@
+{
+  "sources": {
+    "java/experiment/FailoverProbe.java": "c643ce8f39dd269931ad9299a0c4d0031beb404cc55b5db6b7aeced940dfdcb5",
+    "java/experiment/LbApi.java": "e03ea4bafa343f4e76b4921a58641413cbd564f1c2ba61aa723ffb0088d09ac9",
+    "java/experiment/LbEntryPoint.java": "3ec2f4d6724949f41c42c908b63a385ba9667336cf44d394639cb9f05e497766",
+    "java/experiment/LbWiring.java": "11cb39a1fab6f3c8b736be685d77247d6891a0396a343651c9562f84a5ba9eae"
+  },
+  "compileExitCode": 0,
+  "baseImage": "ssasukae-card-experiment:candidate"
+}

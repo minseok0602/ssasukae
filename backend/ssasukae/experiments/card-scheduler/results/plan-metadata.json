@@ -1,0 +1,5 @@
+{
+  "file": "04_Ssasukae_A_card_scheduler_recovery.md",
+  "sha256": "803f56ded1dbef3b452467d549c9107b2f252d9763625a6e44daef968919459a",
+  "scope": "Local Spring Boot JVM scheduler crash/restart; real Redis and MySQL; isolated fixture"
+}

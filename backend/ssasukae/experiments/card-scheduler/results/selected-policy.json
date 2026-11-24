@@ -1,0 +1,6 @@
+{
+  "policy": "cancel",
+  "source": "Explicit user answer during experiment",
+  "decidedAt": "2026-11-20T02:46:31.179119+00:00",
+  "behavior": "Overdue PENDING: SYSTEM_CANCELLED, delete room card, preserve ASSIGNED assignment"
+}

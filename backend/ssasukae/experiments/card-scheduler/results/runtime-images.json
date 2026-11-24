@@ -1,0 +1,42 @@
+[
+  {
+    "tag": "ssasukae-card-experiment:local",
+    "id": "sha256:a91f104319e26ee06d60fc9be02107abccf590a0bc54615a1893fcad1836a5e5",
+    "repoDigests": [
+      "ssasukae-card-experiment@sha256:a91f104319e26ee06d60fc9be02107abccf590a0bc54615a1893fcad1836a5e5"
+    ],
+    "created": "2026-11-20T01:59:47.616485498Z"
+  },
+  {
+    "tag": "ssasukae-card-experiment:candidate",
+    "id": "sha256:72d31c774a8fcc0daac54b1391a05526526809232422ebe219cefbda8877b0cf",
+    "repoDigests": [
+      "ssasukae-card-experiment@sha256:72d31c774a8fcc0daac54b1391a05526526809232422ebe219cefbda8877b0cf"
+    ],
+    "created": "2026-11-20T02:09:38.25728983Z"
+  },
+  {
+    "tag": "eclipse-temurin:17-jdk-jammy",
+    "id": "sha256:76751c16a2a07ec0960e659a2603491f8c79d95592173f6c0df8bf8ebab257cc",
+    "repoDigests": [
+      "eclipse-temurin@sha256:76751c16a2a07ec0960e659a2603491f8c79d95592173f6c0df8bf8ebab257cc"
+    ],
+    "created": "2026-11-11T23:17:36.089853059Z"
+  },
+  {
+    "tag": "mysql:8.4",
+    "id": "sha256:c592c15aaf4a1961e15d82eb31ea5987dda862d1c4b1e93424438c0e91dc1f8d",
+    "repoDigests": [
+      "mysql@sha256:c592c15aaf4a1961e15d82eb31ea5987dda862d1c4b1e93424438c0e91dc1f8d"
+    ],
+    "created": "2026-07-16T21:12:35.723426161Z"
+  },
+  {
+    "tag": "redis:7-alpine",
+    "id": "sha256:7f7d30b7fdd09467bac58198a1f166dd69789d348d4fe859cccb20e0cf287fbe",
+    "repoDigests": [
+      "redis@sha256:7f7d30b7fdd09467bac58198a1f166dd69789d348d4fe859cccb20e0cf287fbe"
+    ],
+    "created": "2026-11-09T20:09:32.419853068Z"
+  }
+]

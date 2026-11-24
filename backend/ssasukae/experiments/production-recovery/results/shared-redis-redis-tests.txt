@@ -1,0 +1,23 @@
+
+Test run finished after 5016 ms
+[         7 containers found      ]
+[         0 containers skipped    ]
+[         7 containers started    ]
+[         0 containers aborted    ]
+[         7 containers successful ]
+[         0 containers failed     ]
+[        26 tests found           ]
+[         0 tests skipped         ]
+[        26 tests started         ]
+[         0 tests aborted         ]
+[        25 tests successful      ]
+[         1 tests failed          ]
+
+
+Failures (1):
+  JUnit Jupiter:RedisCardStateStoreIntegrationTest:concurrentActivationConsumesAssignmentAndActivatesExactlyOnce()
+    MethodSource [className = 'com.ssafy.ssasukae.domain.card.redis.RedisCardStateStoreIntegrationTest', methodName = 'concurrentActivationConsumesAssignmentAndActivatesExactlyOnce', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: 
+expected: 1L
+ but was: 0L
+       com.ssafy.ssasukae.domain.card.redis.RedisCardStateStoreIntegrationTest.concurrentActivationConsumesAssignmentAndActivatesExactlyOnce(RedisCardStateStoreIntegrationTest.java:123)

@@ -1,0 +1,12 @@
+{
+  "prefaultCrossNodeStartMisses": [
+    {
+      "roomId": "17",
+      "initialClientNode": "A",
+      "startNode": "B",
+      "startObservedAt": "2026-11-20T07:00:47.759973341Z",
+      "killRequestedAt": "2026-11-20T07:00:47.795192+00:00",
+      "snapshotRecoveredState": "ACTIVE"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+name: ssasukae-lb-failover
+services:
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: card_experiment
+      MYSQL_USER: experiment
+      MYSQL_PASSWORD: experiment-local-only
+      MYSQL_ROOT_PASSWORD: experiment-root-local-only
+    volumes: [mysql-data:/var/lib/mysql]
+    healthcheck:
+      test: [CMD, mysqladmin, ping, -h, localhost, -uroot, -pexperiment-root-local-only]
+      interval: 1s
+      timeout: 3s
+      retries: 90
+  redis:
+    image: redis:7-alpine
+    command: [redis-server, --appendonly, 'yes']
+    volumes: [redis-data:/data]
+  a: &backend
+    image: ssasukae-lb-experiment:local
+    working_dir: /experiment
+    command: [java, '-XX:TieredStopAtLevel=1', '-Xms128m', '-Xmx512m', '-cp', '/runtime/classes:/runtime/lib/*', experiment.LbEntryPoint, '--spring.config.location=file:/experiment/application-lb.properties']
+    volumes: ['.:/experiment']
+    environment:
+      INSTANCE: A
+      EXPERIMENT_RECOVERY_ENABLED: ${RECOVERY_ENABLED:-true}
+      EXPERIMENT_RECOVERY_POLICY: cancel
+      EXPERIMENT_RECOVERY_SCAN_DELAY_MS: 100
+    depends_on:
+      mysql: {condition: service_healthy}
+      redis: {condition: service_started}
+  b:
+    <<: *backend
+    environment:
+      INSTANCE: B
+      EXPERIMENT_RECOVERY_ENABLED: ${RECOVERY_ENABLED:-true}
+      EXPERIMENT_RECOVERY_POLICY: cancel
+      EXPERIMENT_RECOVERY_SCAN_DELAY_MS: 100
+  lb:
+    image: haproxy:3.2-alpine
+    volumes: ['./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro']
+    ports: ['127.0.0.1:18090:8080', '127.0.0.1:18091:8404']
+    depends_on: [a, b]
+volumes:
+  mysql-data:
+  redis-data:

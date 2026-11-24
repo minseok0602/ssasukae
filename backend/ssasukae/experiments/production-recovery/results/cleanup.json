@@ -1,0 +1,8 @@
+{
+  "containersRemaining": [],
+  "networksRemaining": [],
+  "volumesPreserved": [
+    "ssasukae-production-recovery_mysql-data",
+    "ssasukae-production-recovery_redis-data"
+  ]
+}
