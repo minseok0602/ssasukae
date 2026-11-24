@@ -21,17 +21,13 @@ SSAFY 15기 D206 팀 프로젝트입니다. 일반 노래방에서는 서로의 
 
 ## 📸 화면
 
-| 노래방 입장 | 곡 검색 |
-| :---: | :---: |
-| <img src="readme-assets/room.jpg" width="420" alt="노래방 입장"> | <img src="readme-assets/song-search.jpg" width="420" alt="곡 검색"> |
-| **가사 싱크와 함께 가창** | **가창 점수** |
-| <img src="readme-assets/singing.jpg" width="420" alt="가창 화면"> | <img src="readme-assets/score.jpg" width="420" alt="가창 점수"> |
-| **카드 배틀 · 카드 배정** | **카드 배틀 · 카드 사용** |
-| <img src="readme-assets/battle-card-deal.jpg" width="420" alt="카드 배정"> | <img src="readme-assets/battle-card-use.jpg" width="420" alt="카드 사용"> |
-| **AI 피드백 기록** | **곡별 분석 리포트** |
-| <img src="readme-assets/ai-feedback.jpg" width="420" alt="AI 피드백 기록"> | <img src="readme-assets/analysis-report.jpg" width="420" alt="분석 리포트"> |
-| **손동작으로 조작하는 제스처 컨트롤** | |
-| <img src="readme-assets/gesture-control.jpg" width="420" alt="제스처 컨트롤"> | |
+| 노래방 입장 | 곡 검색 | 가사 싱크와 함께 가창 |
+| :---: | :---: | :---: |
+| <img src="readme-assets/room.jpg" width="300" alt="노래방 입장"> | <img src="readme-assets/song-search.jpg" width="300" alt="곡 검색"> | <img src="readme-assets/singing.jpg" width="300" alt="가창 화면"> |
+| **가창 점수** | **카드 배틀 · 카드 배정** | **카드 배틀 · 카드 사용** |
+| <img src="readme-assets/score.jpg" width="300" alt="가창 점수"> | <img src="readme-assets/battle-card-deal.jpg" width="300" alt="카드 배정"> | <img src="readme-assets/battle-card-use.jpg" width="300" alt="카드 사용"> |
+| **AI 피드백 기록** | **곡별 분석 리포트** | **제스처 컨트롤** |
+| <img src="readme-assets/ai-feedback.jpg" width="300" alt="AI 피드백 기록"> | <img src="readme-assets/analysis-report.jpg" width="300" alt="분석 리포트"> | <img src="readme-assets/gesture-control.jpg" width="300" alt="제스처 컨트롤"> |
 
 ## ✨ 주요 기능
 
